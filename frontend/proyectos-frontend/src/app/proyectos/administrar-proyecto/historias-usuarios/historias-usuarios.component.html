@@ -1,0 +1,96 @@
+<app-mensaje [mensaje]="mensaje"></app-mensaje>
+
+
+    <div class="container">
+
+
+    <br>
+
+    <div class="mb-3 col-6">
+        <label class="form-label">Módulo</label>
+        <select class="form-select"  aria-label="Multiple select example" (change)="onModuloChange($event)">
+            <option *ngFor="let option of modulos" [value]="option.idModulo">{{ option.nombreModulo }}</option>
+        </select>
+    </div>
+
+    
+    <div style="
+            display: flex;
+            justify-content: end;
+        ">
+            <div class="mb-3">
+                <button class="btn btn-primary btn-lg" (click)="abrirModalCrear()">Agregar</button>
+            </div>
+    </div>
+
+    <table class="table table-striped">
+        <thead class="table-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Editar</th>
+        </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let item of historiasUsuarios; let i = index">
+            <th scope="row">{{ item.idHistoriaUsuario }}</th>
+            <td>{{ item.nombre }}</td>
+            <td>{{ item.descripcion }}</td>
+            <td >
+                <img src="https://cdn-icons-png.flaticon.com/512/84/84380.png" (click)="abrirModalEditar(item)" width="30px" height="30px">
+            </td>
+            </tr>
+        </tbody>
+
+    </table>
+    
+    </div>
+
+
+    <div class="modal" tabindex="-1" #upsertModalHU>
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">HISTORIA DE USUARIO</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              
+                <form >
+                    <div class="mb-3">
+                      <label class="form-label">Nombre</label>
+                      <input type="text" class="form-control" [(ngModel)]="historiasUsuarioSeleccionado.nombre" name="nombreProyecto" required>
+                    </div>
+
+                    <div class="mb-3">
+                      <div class="form-floating">
+                        <textarea class="form-control" [(ngModel)]="historiasUsuarioSeleccionado.descripcion" name="descripcion"  id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Descripción</label>
+                      </div>
+                    </div>
+
+                    @if (historiasUsuarioSeleccionado.idHistoriaUsuario != 0) 
+                    {
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" [(ngModel)]="historiasUsuarioSeleccionado.activo" name="activo" type="checkbox"  id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Activo
+                                </label>
+                              </div>
+                        </div>
+    
+                    }
+
+                </form>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" (click)="upsertHistoriaUsuario()">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>

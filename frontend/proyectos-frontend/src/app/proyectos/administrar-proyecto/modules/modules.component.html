@@ -1,0 +1,89 @@
+<app-mensaje [mensaje]="mensaje"></app-mensaje>
+
+
+    <div class="container">
+
+
+        <br>
+        
+        <div style="
+            display: flex;
+            justify-content: end;
+        ">
+            <div class="mb-3">
+                <button class="btn btn-primary btn-lg" (click)="abrirModalCrear()">Agregar</button>
+            </div>
+        </div>
+
+        <table class="table table-striped"
+            >
+            <thead class="table-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Editar</th>
+            </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let item of modulos; let i = index">
+                <th scope="row">{{ item.idModulo }}</th>
+                <td>{{ item.nombreModulo }}</td>
+                <td>{{ item.descripcion }}</td>
+                <td >
+                    <img src="https://cdn-icons-png.flaticon.com/512/84/84380.png" (click)="abrirModalEditar(item)" width="30px" height="30px">
+                </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <div class="modal" tabindex="-1" #upsertModal>
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">MÓDULO</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              
+                <form >
+                    <div class="mb-3">
+                      <label class="form-label">Nombre Módulo</label>
+                      <input type="text" class="form-control" [(ngModel)]="moduloSeleccionado.nombreModulo" name="nombreProyecto" required>
+                    </div>
+
+                    <div class="mb-3">
+                      <div class="form-floating">
+                        <textarea class="form-control" [(ngModel)]="moduloSeleccionado.descripcion" name="descripcion"  id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Descripción</label>
+                      </div>
+                    </div>
+
+                    @if (moduloSeleccionado.idModulo != 0) 
+                    {
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" [(ngModel)]="moduloSeleccionado.activo" name="activo" type="checkbox"  id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Activo
+                                </label>
+                              </div>
+                        </div>
+    
+                    }
+
+                </form>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" (click)="upsertModulo()">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>

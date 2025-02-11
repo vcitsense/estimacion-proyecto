@@ -1,0 +1,54 @@
+<app-mensaje [mensaje]="mensaje"></app-mensaje>
+
+
+    <div class="container">
+
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#/entidades">Entidades</a></li>
+            <li class="breadcrumb-item"><a href="#/proyectos/{{idProyectoSeleccionado}}">Proyectos</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Proyecto</li>
+
+          </ol>
+        </nav>
+
+        <div style="
+            display: flex;
+            justify-content: center;
+        ">
+            <h2>{{nombreProyecctoSelecciado}}</h2>
+        </div>
+        <br>
+
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="{'active': tabSeleccionado === 1}" (click)="seleccionarTab(1)" aria-current="page">Módulos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [ngClass]="{'active': tabSeleccionado === 2}" (click)="seleccionarTab(2)" aria-current="page">Historias de Usuario</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="{'active': tabSeleccionado === 3}" (click)="seleccionarTab(3)" aria-current="page">Tareas</a>
+            </li>
+          </ul>
+
+
+          @if (tabSeleccionado === 1) 
+          {
+            <app-modules></app-modules>
+          }
+
+          @if (tabSeleccionado === 2) 
+          {
+            <app-historias-usuarios></app-historias-usuarios>
+          }
+
+          @if (tabSeleccionado === 3) 
+          {
+            <app-actividades></app-actividades>
+          }
+          
+
+    </div>
+

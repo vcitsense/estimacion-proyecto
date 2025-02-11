@@ -1,0 +1,155 @@
+<app-mensaje [mensaje]="mensaje"></app-mensaje>
+
+
+    <div class="container">
+
+
+    <br>
+
+    <div class="row">
+
+        <div class="mb-3 col-3">
+            <label class="form-label">Módulo</label>
+            <select class="form-select"  aria-label="Multiple select example" (change)="onModuloChange($event)">
+                <option *ngFor="let option of modulos" [value]="option.idModulo">{{ option.nombreModulo }}</option>
+            </select>
+        </div>
+    
+        <div class="mb-3 col-3">
+            <label class="form-label">Historia Usuario</label>
+            <select class="form-select"  aria-label="Multiple select example" (change)="onHistoriaChange($event)">
+                <option  [value]="0">Seleccione</option>
+                <option *ngFor="let option of historiasUsuarios" [value]="option.idHistoriaUsuario">{{ option.nombre }}</option>
+            </select>
+        </div>
+
+    </div>
+   
+
+    @if (idHistoriaUsuarioSeleccionada != 0) 
+    {
+     
+    <div style="
+            display: flex;
+            justify-content: end;
+        ">
+            <div class="mb-3">
+                <button class="btn btn-primary btn-lg" (click)="abrirModalCrear()">Agregar</button>
+            </div>
+    </div>
+
+    <table class="table table-striped">
+        <thead class="table-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Analisis</th>
+            <th scope="col">Documentación</th>
+            <th scope="col">Pruebas</th>
+            <th scope="col">Devops</th>
+            <th scope="col">Diseño Grafico</th>
+            <th scope="col">Editar</th>
+        </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let item of actividades; let i = index">
+            <th scope="row">{{ item.idActividad }}</th>
+            <td>{{ item.descripcion }}</td>
+            <td>{{ item.analisis }}</td>
+            <td>{{ item.documentacion }}</td>
+            <td>{{ item.pruebas }}</td>
+            <td>{{ item.devops }}</td>
+            <td>{{ item.disenoGrafico }}</td>
+            <td >
+                <img src="https://cdn-icons-png.flaticon.com/512/84/84380.png" (click)="abrirModalEditar(item)" width="30px" height="30px">
+            </td>
+            </tr>
+        </tbody>
+
+    </table>
+    
+        
+    }
+    </div>
+
+
+    <div class="modal" tabindex="-1" #upsertModalActividad>
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">TAREA</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              
+                <form >
+
+                    <div class="mb-3">
+                      <div class="form-floating">
+                        <textarea class="form-control" [(ngModel)]="actividadSeleccionada.descripcion" name="descripcion"  id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Descripción</label>
+                      </div>
+                    </div>
+
+                    <h5>Esfuerzo en horas</h5>
+
+                    <div class="row">
+                        <div class="mb-3 col-6">
+                            <label class="form-label">Analisis</label>
+                            <input type="number" class="form-control" [(ngModel)]="actividadSeleccionada.analisis" name="analisis" required>
+                        </div>
+    
+                        <div class="mb-3 col-6">
+                            <label class="form-label">Documentación</label>
+                            <input type="number" class="form-control" [(ngModel)]="actividadSeleccionada.documentacion" name="documentacion" required>
+                        </div>
+                    </div>
+
+                    
+                    <div class="row">
+
+                        <div class="mb-3  col-6">
+                            <label class="form-label">Pruebas</label>
+                            <input type="number" class="form-control" [(ngModel)]="actividadSeleccionada.pruebas" name="pruebas" required>
+                        </div>
+    
+                        <div class="mb-3  col-6">
+                            <label class="form-label">Devops</label>
+                            <input type="number" class="form-control" [(ngModel)]="actividadSeleccionada.devops" name="devops" required>
+                        </div>
+
+                    </div>
+                    
+                    <div class="row">
+
+                        <div class="mb-3 col-6">
+                            <label class="form-label">Diseño Grafico</label>
+                            <input type="number" class="form-control" [(ngModel)]="actividadSeleccionada.disenoGrafico" name="disenoGrafico" required>
+                        </div>
+                        @if (actividadSeleccionada.idActividad != 0) 
+                        {
+                            <div class="mb-3  col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" [(ngModel)]="actividadSeleccionada.activo" name="activo" type="checkbox"  id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                      Activo
+                                    </label>
+                                  </div>
+                            </div>
+        
+                        }
+    
+                    </div>
+
+                   
+                </form>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" (click)="upsertActividad()">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>

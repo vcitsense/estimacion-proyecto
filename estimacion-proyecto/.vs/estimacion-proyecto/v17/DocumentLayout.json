@@ -1,0 +1,247 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0A92F50C-1EBC-43AD-A4E9-51E710BCCB0D}|..\\estimacion-proyecto.domain\\estimacion-proyecto.domain.csproj|c:\\users\\victorcuellar\\documents\\personal\\repo\\unir\\estimacion-proyecto\\estimacion-proyecto.domain\\dto\\itemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A92F50C-1EBC-43AD-A4E9-51E710BCCB0D}|..\\estimacion-proyecto.domain\\estimacion-proyecto.domain.csproj|c:\\users\\victorcuellar\\documents\\personal\\repo\\unir\\estimacion-proyecto\\estimacion-proyecto.domain\\dto\\modulodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FA30C40-5FC0-440B-AAD9-8F8E2C4499F4}|..\\estimacion-proyecto.data\\estimacion-proyecto.data.csproj|c:\\users\\victorcuellar\\documents\\personal\\repo\\unir\\estimacion-proyecto\\estimacion-proyecto.data\\proyectodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FA30C40-5FC0-440B-AAD9-8F8E2C4499F4}|..\\estimacion-proyecto.data\\estimacion-proyecto.data.csproj|c:\\users\\victorcuellar\\documents\\personal\\repo\\unir\\estimacion-proyecto\\estimacion-proyecto.data\\proyectodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A92F50C-1EBC-43AD-A4E9-51E710BCCB0D}|..\\estimacion-proyecto.domain\\estimacion-proyecto.domain.csproj|c:\\users\\victorcuellar\\documents\\personal\\repo\\unir\\estimacion-proyecto\\estimacion-proyecto.domain\\dto\\proyectonavegadordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A92F50C-1EBC-43AD-A4E9-51E710BCCB0D}|..\\estimacion-proyecto.domain\\estimacion-proyecto.domain.csproj|c:\\users\\victorcuellar\\documents\\personal\\repo\\unir\\estimacion-proyecto\\estimacion-proyecto.domain\\dto\\auditoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06FD8E29-9632-4115-930A-4ADF3A6058E7}|estimacion-proyecto.csproj|c:\\users\\victorcuellar\\documents\\personal\\repo\\unir\\estimacion-proyecto\\estimacion-proyecto\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{06FD8E29-9632-4115-930A-4ADF3A6058E7}|estimacion-proyecto.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06FD8E29-9632-4115-930A-4ADF3A6058E7}|estimacion-proyecto.csproj|c:\\users\\victorcuellar\\documents\\personal\\repo\\unir\\estimacion-proyecto\\estimacion-proyecto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06FD8E29-9632-4115-930A-4ADF3A6058E7}|estimacion-proyecto.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{561DE120-E1C5-4537-8D3A-724FCACDE5FD}|..\\estimacion-proyecto.core\\estimacion-proyecto.core.csproj|c:\\users\\victorcuellar\\documents\\personal\\repo\\unir\\estimacion-proyecto\\estimacion-proyecto.core\\core\\proyectocore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A92F50C-1EBC-43AD-A4E9-51E710BCCB0D}|..\\estimacion-proyecto.domain\\estimacion-proyecto.domain.csproj|c:\\users\\victorcuellar\\documents\\personal\\repo\\unir\\estimacion-proyecto\\estimacion-proyecto.domain\\dto\\roldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06FD8E29-9632-4115-930A-4ADF3A6058E7}|estimacion-proyecto.csproj|c:\\users\\victorcuellar\\documents\\personal\\repo\\unir\\estimacion-proyecto\\estimacion-proyecto\\controllers\\proyectocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06FD8E29-9632-4115-930A-4ADF3A6058E7}|estimacion-proyecto.csproj|solutionrelative:controllers\\proyectocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06FD8E29-9632-4115-930A-4ADF3A6058E7}|estimacion-proyecto.csproj|c:\\users\\victorcuellar\\documents\\personal\\repo\\unir\\estimacion-proyecto\\estimacion-proyecto\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06FD8E29-9632-4115-930A-4ADF3A6058E7}|estimacion-proyecto.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FA30C40-5FC0-440B-AAD9-8F8E2C4499F4}|..\\estimacion-proyecto.data\\estimacion-proyecto.data.csproj|c:\\users\\victorcuellar\\documents\\personal\\repo\\unir\\estimacion-proyecto\\estimacion-proyecto.data\\migrations\\20250203213149_init-migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 2057,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ItemDto.cs",
+              "DocumentMoniker": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.domain\\Dto\\ItemDto.cs",
+              "RelativeDocumentMoniker": "..\\estimacion-proyecto.domain\\Dto\\ItemDto.cs",
+              "ToolTip": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.domain\\Dto\\ItemDto.cs",
+              "RelativeToolTip": "..\\estimacion-proyecto.domain\\Dto\\ItemDto.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAIwBsAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T00:50:34.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProyectoNavegadorDto.cs",
+              "DocumentMoniker": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.domain\\Dto\\ProyectoNavegadorDto.cs",
+              "RelativeDocumentMoniker": "..\\estimacion-proyecto.domain\\Dto\\ProyectoNavegadorDto.cs",
+              "ToolTip": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.domain\\Dto\\ProyectoNavegadorDto.cs",
+              "RelativeToolTip": "..\\estimacion-proyecto.domain\\Dto\\ProyectoNavegadorDto.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAUwAsAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T00:31:39.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAAAH4AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T22:10:38.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RolDto.cs",
+              "DocumentMoniker": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.domain\\Dto\\RolDto.cs",
+              "RelativeDocumentMoniker": "..\\estimacion-proyecto.domain\\Dto\\RolDto.cs",
+              "ToolTip": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.domain\\Dto\\RolDto.cs",
+              "RelativeToolTip": "..\\estimacion-proyecto.domain\\Dto\\RolDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T21:37:21.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "20250203213149_init-migration.cs",
+              "DocumentMoniker": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.data\\Migrations\\20250203213149_init-migration.cs",
+              "RelativeDocumentMoniker": "..\\estimacion-proyecto.data\\Migrations\\20250203213149_init-migration.cs",
+              "ToolTip": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.data\\Migrations\\20250203213149_init-migration.cs",
+              "RelativeToolTip": "..\\estimacion-proyecto.data\\Migrations\\20250203213149_init-migration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T21:31:49.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-01T23:32:11.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuditoriaDto.cs",
+              "DocumentMoniker": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.domain\\Dto\\AuditoriaDto.cs",
+              "RelativeDocumentMoniker": "..\\estimacion-proyecto.domain\\Dto\\AuditoriaDto.cs",
+              "ToolTip": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.domain\\Dto\\AuditoriaDto.cs",
+              "RelativeToolTip": "..\\estimacion-proyecto.domain\\Dto\\AuditoriaDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T02:55:41.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "Controllers\\UsuarioController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T02:06:51.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProyectoController.cs",
+              "DocumentMoniker": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto\\Controllers\\ProyectoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProyectoController.cs",
+              "ToolTip": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto\\Controllers\\ProyectoController.cs",
+              "RelativeToolTip": "Controllers\\ProyectoController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAALgAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T02:06:36.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProyectoDatos.cs",
+              "DocumentMoniker": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.data\\ProyectoDatos.cs",
+              "RelativeDocumentMoniker": "..\\estimacion-proyecto.data\\ProyectoDatos.cs",
+              "ToolTip": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.data\\ProyectoDatos.cs",
+              "RelativeToolTip": "..\\estimacion-proyecto.data\\ProyectoDatos.cs",
+              "ViewState": "AQIAAMcAAAAAAAAAAAAkwE4BAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T01:57:00.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProyectoCore.cs",
+              "DocumentMoniker": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.core\\Core\\ProyectoCore.cs",
+              "RelativeDocumentMoniker": "..\\estimacion-proyecto.core\\Core\\ProyectoCore.cs",
+              "ToolTip": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.core\\Core\\ProyectoCore.cs",
+              "RelativeToolTip": "..\\estimacion-proyecto.core\\Core\\ProyectoCore.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMBAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T01:48:43.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProyectoDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.data\\ProyectoDbContext.cs",
+              "RelativeDocumentMoniker": "..\\estimacion-proyecto.data\\ProyectoDbContext.cs",
+              "ToolTip": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.data\\ProyectoDbContext.cs",
+              "RelativeToolTip": "..\\estimacion-proyecto.data\\ProyectoDbContext.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAA3wBkAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T01:48:13.694Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1098,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ModuloDto.cs",
+              "DocumentMoniker": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.domain\\Dto\\ModuloDto.cs",
+              "RelativeDocumentMoniker": "..\\estimacion-proyecto.domain\\Dto\\ModuloDto.cs",
+              "ToolTip": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.domain\\Dto\\ModuloDto.cs",
+              "RelativeToolTip": "..\\estimacion-proyecto.domain\\Dto\\ModuloDto.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwCQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T00:32:07.453Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 895,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

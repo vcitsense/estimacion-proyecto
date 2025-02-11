@@ -1,0 +1,35 @@
+
+<div class="container" style="
+padding-top: 100px;
+padding-left: 300px;
+padding-right: 300px;
+">
+
+<form (ngSubmit)="onSubmit()">
+
+    <div class="mb-3 center-content">
+      <h1 class="form-label">GESTOR DE PROYECTOS</h1>
+    </div>
+    
+    <div class="mb-3">
+      <label class="form-label">Usuario</label>
+      <input type="text" class="form-control" [(ngModel)]="user.usuario" name="usuario" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Contraseña</label>
+      <input type="password" class="form-control" [(ngModel)]="user.contrasena" name="contrasena" required>
+    </div>
+    <div class="mb-3">
+      <button type="submit" class="btn btn-primary btn-lg">Ingresar</button>
+    </div>
+
+    <div class="mb-3 center-content">
+      <img src="https://colombia.unir.net/wp-content/uploads/sites/4/2019/04/Unir_2021_logo.svg"  width="350px" height="250px">
+    </div>
+  </form>
+
+</div>
+
+
+<app-mensaje [mensaje]="mensaje"></app-mensaje>
+

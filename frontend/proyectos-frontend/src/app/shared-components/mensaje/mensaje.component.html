@@ -1,0 +1,37 @@
+
+@if(mensaje.ver)
+{
+    <div class="container" style="
+            padding-top: 100px;
+            padding-left: 300px;
+            padding-right: 300px;
+            ">
+
+        @if(mensaje.codigo == 200)
+        {
+            <div class="alert alert-success" role="alert" style="
+                display: flex;
+                justify-content: space-between;
+            ">
+                {{mensaje.mensaje}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="ocultarMensaje()"></button>
+            </div>
+        }
+
+        @if(mensaje.codigo == 500)
+        {
+            <div class="alert alert-danger" role="alert" style="
+                display: flex;
+                justify-content: space-between;
+            ">
+                {{mensaje.mensaje}}
+                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="ocultarMensaje()"></button>
+            </div>
+        }
+        
+    
+          
+    
+    </div>
+    
+}

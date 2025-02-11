@@ -1,0 +1,17 @@
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\bin\Release\net8.0\estimacion-proyecto.data.deps.json
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\bin\Release\net8.0\estimacion-proyecto.data.runtimeconfig.json
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\bin\Release\net8.0\estimacion-proyecto.data.dll
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\bin\Release\net8.0\estimacion-proyecto.data.pdb
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\bin\Release\net8.0\estimacion-proyecto.domain.dll
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\bin\Release\net8.0\estimacion-proyecto.domain.pdb
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\obj\Release\net8.0\estimacion-proyecto.data.csproj.AssemblyReference.cache
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\obj\Release\net8.0\estimacion-proyecto.data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\obj\Release\net8.0\estimacion-proyecto.data.AssemblyInfoInputs.cache
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\obj\Release\net8.0\estimacion-proyecto.data.AssemblyInfo.cs
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\obj\Release\net8.0\estimacion-proyecto.data.csproj.CoreCompileInputs.cache
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\obj\Release\net8.0\estimaci.EA357F6D.Up2Date
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\obj\Release\net8.0\estimacion-proyecto.data.dll
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\obj\Release\net8.0\refint\estimacion-proyecto.data.dll
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\obj\Release\net8.0\estimacion-proyecto.data.pdb
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\obj\Release\net8.0\estimacion-proyecto.data.genruntimeconfig.cache
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\obj\Release\net8.0\ref\estimacion-proyecto.data.dll
