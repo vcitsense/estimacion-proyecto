@@ -32,8 +32,8 @@ pipeline {
                     // Copiar SOLO los archivos del frontend evitando otros directorios
                     powershell '''
                     $source = "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\pipeline-release\\frontend\\proyectos-frontend\\dist\\proyectos-frontend\\browser"
-                    $destination = "C:\\inetpub\\wwwroot\\proyectos-frontend"
-
+                    $destination = "C:\\Users\\Administrator\\Documents\\Sites\\TestProyect\\Front"
+					
                     # Crear el destino si no existe
                     if (!(Test-Path $destination)) {
                         New-Item -ItemType Directory -Path $destination -Force
