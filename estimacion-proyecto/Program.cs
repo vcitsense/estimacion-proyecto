@@ -71,7 +71,7 @@ try
         //c.EnableAnnotations();
         c.SwaggerDoc("v1", new OpenApiInfo
         {
-            Title = "Estimacion de Proyectos - Servicios",
+            Title = "Estimacion de Proyectos - Servicios V1",
             Version = "v.1.0.10",
             Description = "Web Api",
             TermsOfService = new Uri("https://www.itsense.com.co"),
@@ -123,11 +123,11 @@ try
     // Configure the HTTP request pipeline.
     if (app.Environment.IsDevelopment())
     {
-        app.UseSwagger();
-        app.UseSwaggerUI();
+       
     }
 
-   
+    app.UseSwagger();
+    app.UseSwaggerUI();
 
     app.UseHttpsRedirection();
 

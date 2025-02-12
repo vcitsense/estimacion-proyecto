@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("estimacion-proyecto.domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee5978de44eb567d1e9ef3c9af653b4fce494cf6")]
 [assembly: System.Reflection.AssemblyProductAttribute("estimacion-proyecto.domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("estimacion-proyecto.domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

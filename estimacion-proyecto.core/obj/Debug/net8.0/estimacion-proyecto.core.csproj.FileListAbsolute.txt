@@ -15,3 +15,4 @@ C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimaci
 C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.core\obj\Debug\net8.0\refint\estimacion-proyecto.core.dll
 C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.core\obj\Debug\net8.0\estimacion-proyecto.core.pdb
 C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.core\obj\Debug\net8.0\ref\estimacion-proyecto.core.dll
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.core\obj\Debug\net8.0\estimacion-proyecto.core.sourcelink.json

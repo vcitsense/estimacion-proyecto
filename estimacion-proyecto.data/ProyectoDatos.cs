@@ -332,7 +332,7 @@ namespace estimacion_proyecto.data
             try
             {
 
-                var navegadores =  _DbContext.cata
+                //var navegadores =  _DbContext.cata
                 return _DbContext.Actividades.Where(x => x.IdHistoriaUsuario == idHistoriaUsuario).ToList();
             }
             catch (Exception ex)

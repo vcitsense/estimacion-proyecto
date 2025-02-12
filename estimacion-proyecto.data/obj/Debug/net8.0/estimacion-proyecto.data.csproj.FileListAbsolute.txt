@@ -15,3 +15,4 @@ C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimaci
 C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\obj\Debug\net8.0\estimacion-proyecto.data.pdb
 C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\obj\Debug\net8.0\estimacion-proyecto.data.genruntimeconfig.cache
 C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\obj\Debug\net8.0\ref\estimacion-proyecto.data.dll
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.data\obj\Debug\net8.0\estimacion-proyecto.data.sourcelink.json

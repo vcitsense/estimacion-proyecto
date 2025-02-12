@@ -9,3 +9,4 @@ C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimaci
 C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.domain\obj\Debug\net8.0\refint\estimacion-proyecto.domain.dll
 C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.domain\obj\Debug\net8.0\estimacion-proyecto.domain.pdb
 C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.domain\obj\Debug\net8.0\ref\estimacion-proyecto.domain.dll
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto.domain\obj\Debug\net8.0\estimacion-proyecto.domain.sourcelink.json
