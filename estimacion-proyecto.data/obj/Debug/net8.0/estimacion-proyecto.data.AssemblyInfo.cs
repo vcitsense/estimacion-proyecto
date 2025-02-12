@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("estimacion-proyecto.data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5505e6ef3f66e5addb7da6c99335ed27dfd33579")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94a30922eed5284885ecab66f4aff6c755da1487")]
 [assembly: System.Reflection.AssemblyProductAttribute("estimacion-proyecto.data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("estimacion-proyecto.data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

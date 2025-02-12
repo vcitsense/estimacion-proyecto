@@ -9,8 +9,8 @@ using Microsoft.OpenApi.Models;
 using NLog;
 using System.Text;
 
-var logger = NLog.LogManager.Setup().LoadConfigurationFromFile().GetCurrentClassLogger();
-logger.Error("Inicio la ejecución");
+//var logger = NLog.LogManager.Setup().LoadConfigurationFromFile().GetCurrentClassLogger();
+//logger.Error("Inicio la ejecución");
 
 try
 {
@@ -71,7 +71,7 @@ try
         //c.EnableAnnotations();
         c.SwaggerDoc("v1", new OpenApiInfo
         {
-            Title = "Estimacion de Proyectos - Servicios V2",
+            Title = "Estimacion de Proyectos - Servicios V3",
             Version = "v.1.0.10",
             Description = "Web Api",
             TermsOfService = new Uri("https://www.itsense.com.co"),
