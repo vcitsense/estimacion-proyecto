@@ -18,6 +18,7 @@ pipeline {
                     echo 'Instalando dependencias...'
                     dir('frontend/proyectos-frontend') {
                         sh 'npm install'
+						sh 'npm run build'
                     }
                 }
             }
