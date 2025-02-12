@@ -12,7 +12,7 @@ pipeline {
             }
         }
 
-        stage('Instalar Dependencias') {
+        stage('Instalar Dependencias Frontend') {
             steps {
                 script {
                     echo 'Instalando dependencias...'
@@ -34,28 +34,48 @@ pipeline {
             }
         }
 
+        stage('Compilar Backend .NET') {
+            steps {
+                script {
+                    echo 'Compilando Backend .NET...'
+                    dir('estimacion-proyecto') {
+                        bat 'dotnet publish -c Release -r win-x64 --self-contained true -o publish_output'
+                    }
+                }
+            }
+        }
+
         stage('Desplegar en IIS') {
             steps {
                 script {
                     echo 'Desplegando en IIS...'
 
-                    // Copiar SOLO los archivos del frontend evitando otros directorios
+                    // Desplegar Frontend
                     powershell '''
-                    $source = "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\pipeline-release\\frontend\\proyectos-frontend\\dist\\proyectos-frontend\\browser"
-                    $destination = "C:\\Users\\Administrator\\Documents\\Sites\\TestProyect\\Front"
-					
-                    # Crear el destino si no existe
-                    if (!(Test-Path $destination)) {
-                        New-Item -ItemType Directory -Path $destination -Force
+                    $sourceFront = "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\pipeline-release\\frontend\\proyectos-frontend\\dist\\proyectos-frontend\\browser"
+                    $destinationFront = "C:\\Users\\Administrator\\Documents\\Sites\\TestProyect\\Front"
+
+                    if (!(Test-Path $destinationFront)) {
+                        New-Item -ItemType Directory -Path $destinationFront -Force
                     }
 
-                    # Eliminar archivos anteriores en el destino
-                    Get-ChildItem -Path $destination -Recurse | Remove-Item -Force -Recurse
+                    Get-ChildItem -Path $destinationFront -Recurse | Remove-Item -Force -Recurse
+                    Copy-Item -Path "$sourceFront\\*" -Destination $destinationFront -Recurse -Force
+                    echo "Frontend desplegado correctamente en $destinationFront"
+                    '''
 
-                    # Copiar solo los archivos del frontend
-                    Copy-Item -Path "$source\\*" -Destination $destination -Recurse -Force
+                    // Desplegar Backend
+                    powershell '''
+                    $sourceBack = "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\pipeline-release\\estimacion-proyecto\\publish_output"
+                    $destinationBack = "C:\\Users\\Administrator\\Documents\\Sites\\TestProyect\\Back"
 
-                    echo "Archivos copiados correctamente a $destination"
+                    if (!(Test-Path $destinationBack)) {
+                        New-Item -ItemType Directory -Path $destinationBack -Force
+                    }
+
+                    Get-ChildItem -Path $destinationBack -Recurse | Remove-Item -Force -Recurse
+                    Copy-Item -Path "$sourceBack\\*" -Destination $destinationBack -Recurse -Force
+                    echo "Backend desplegado correctamente en $destinationBack"
                     '''
                 }
             }
