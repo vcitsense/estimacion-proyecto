@@ -6,7 +6,13 @@
 /out-tsc
 /bazel-out
 /.vs
-
+.vs/
+**/bin/
+**/obj/
+**/bin/
+**/.vs/
+**/Properties/PublishProfiles/
+**/estimacion-proyecto/.vs/
 # Node
 /node_modules
 npm-debug.log

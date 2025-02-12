@@ -71,7 +71,7 @@ try
         //c.EnableAnnotations();
         c.SwaggerDoc("v1", new OpenApiInfo
         {
-            Title = "Estimacion de Proyectos - Servicios V1",
+            Title = "Estimacion de Proyectos - Servicios V2",
             Version = "v.1.0.10",
             Description = "Web Api",
             TermsOfService = new Uri("https://www.itsense.com.co"),
