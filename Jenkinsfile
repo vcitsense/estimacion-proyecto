@@ -28,16 +28,24 @@ pipeline {
             steps {
                 script {
                     echo 'Desplegando en IIS...'
-                    // Copiar los archivos al directorio de destino
+
+                    // Copiar SOLO los archivos del frontend evitando otros directorios
                     powershell '''
-                    $source = "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\pipeline-release"
-                    $destination = "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\pipeline-release\\frontend\\proyectos-frontend\\dist\\proyectos-frontend\\browser"
+                    $source = "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\pipeline-release\\frontend\\proyectos-frontend\\dist\\proyectos-frontend\\browser"
+                    $destination = "C:\\inetpub\\wwwroot\\proyectos-frontend"
 
-                    # Eliminar archivos existentes en destino
-                    Remove-Item -Path $destination\\* -Recurse -Force -ErrorAction SilentlyContinue
+                    # Crear el destino si no existe
+                    if (!(Test-Path $destination)) {
+                        New-Item -ItemType Directory -Path $destination -Force
+                    }
 
-                    # Copiar archivos al destino
+                    # Eliminar archivos anteriores en el destino
+                    Get-ChildItem -Path $destination -Recurse | Remove-Item -Force -Recurse
+
+                    # Copiar solo los archivos del frontend
                     Copy-Item -Path "$source\\*" -Destination $destination -Recurse -Force
+
+                    echo "Archivos copiados correctamente a $destination"
                     '''
                 }
             }
