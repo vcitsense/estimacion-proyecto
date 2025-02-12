@@ -28,7 +28,17 @@ pipeline {
             steps {
                 script {
                     echo 'Desplegando en IIS...'
+                    // Copiar los archivos al directorio de destino
+                    powershell '''
+                    $source = "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\pipeline-release"
+                    $destination = "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\pipeline-release\\frontend\\proyectos-frontend\\dist\\proyectos-frontend\\browser"
 
+                    # Eliminar archivos existentes en destino
+                    Remove-Item -Path $destination\\* -Recurse -Force -ErrorAction SilentlyContinue
+
+                    # Copiar archivos al destino
+                    Copy-Item -Path "$source\\*" -Destination $destination -Recurse -Force
+                    '''
                 }
             }
         }
