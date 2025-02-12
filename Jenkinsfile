@@ -110,17 +110,6 @@ pipeline {
             }
         }
 
-        stage('Reiniciar IIS') {
-            steps {
-                script {
-                    echo 'Reiniciando IIS...'
-                    powershell '''
-                    Start-Service -Name W3SVC
-                    Start-Website -Name "TestProject"
-                    '''
-                }
-            }
-        }
     }
 
     post {
