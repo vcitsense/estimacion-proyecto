@@ -28,7 +28,7 @@ pipeline {
                 script {
                     echo 'Compilando Angular...'
                     dir('frontend/proyectos-frontend') {
-                        bat 'ng build --configuration production'
+                        bat 'npx ng build --configuration production'
                     }
                 }
             }
