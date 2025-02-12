@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs "NodeJS 18"
+    }
+
     stages {
         stage('Clonar Código') {
             steps {
@@ -8,18 +12,24 @@ pipeline {
             }
         }
 
-        stage('Compilar') {
+        stage('Instalar Dependencias') {
             steps {
                 script {
-                    echo 'Compilando código...'
+                    echo 'Instalando dependencias...'
+                    dir('frontend/proyectos-frontend') {
+                        sh 'npm install'
+                    }
                 }
             }
         }
 
-        stage('Publicar Aplicación') {
+        stage('Compilar Frontend') {
             steps {
                 script {
-                    echo 'Publicando aplicación...'
+                    echo 'Compilando Angular...'
+                    dir('frontend/proyectos-frontend') {
+                        sh 'ng build --configuration production'
+                    }
                 }
             }
         }
@@ -29,11 +39,11 @@ pipeline {
                 script {
                     echo 'Desplegando en IIS...'
 
-                    // Copiar SOLO los archivos del frontend evitando otros directorios
+                    // Copiar SOLO los archivos del frontend generados
                     powershell '''
                     $source = "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\pipeline-release\\frontend\\proyectos-frontend\\dist\\proyectos-frontend\\browser"
                     $destination = "C:\\Users\\Administrator\\Documents\\Sites\\TestProyect\\Front"
-					
+
                     # Crear el destino si no existe
                     if (!(Test-Path $destination)) {
                         New-Item -ItemType Directory -Path $destination -Force
@@ -42,7 +52,7 @@ pipeline {
                     # Eliminar archivos anteriores en el destino
                     Get-ChildItem -Path $destination -Recurse | Remove-Item -Force -Recurse
 
-                    # Copiar solo los archivos del frontend
+                    # Copiar solo los archivos del frontend compilado
                     Copy-Item -Path "$source\\*" -Destination $destination -Recurse -Force
 
                     echo "Archivos copiados correctamente a $destination"
