@@ -51,8 +51,8 @@ pipeline {
                     echo 'Deteniendo IIS y limpiando espacio...'
                     powershell '''
                     # Detener IIS antes de eliminar archivos
-                    Stop-Website -Name "TestProject"
-                    Stop-Service -Name W3SVC
+                    //Stop-Website -Name "TestProject"
+                    //Stop-Service -Name W3SVC
 
                     # Limpiar workspace de Jenkins
                     echo "Eliminando workspace de Jenkins..."
@@ -68,9 +68,9 @@ pipeline {
                     }
 
                     echo "Eliminando archivos previos en el backend..."
-                    if (Test-Path $destinationBack) {
-                        Get-ChildItem -Path $destinationBack -Recurse | Remove-Item -Force -Recurse -ErrorAction SilentlyContinue
-                    }
+                    //if (Test-Path $destinationBack) {
+                    //    Get-ChildItem -Path $destinationBack -Recurse | Remove-Item -Force -Recurse -ErrorAction SilentlyContinue
+                    //}
                     '''
                 }
             }
@@ -95,17 +95,17 @@ pipeline {
                     '''
 
                     // Desplegar Backend
-                    powershell '''
-                    $sourceBack = "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\pipeline-release\\estimacion-proyecto\\publish_output"
-                    $destinationBack = "C:\\Users\\Administrator\\Documents\\Sites\\TestProyect\\Back"
-
-                    if (!(Test-Path $destinationBack)) {
-                        New-Item -ItemType Directory -Path $destinationBack -Force
-                    }
-
-                    Copy-Item -Path "$sourceBack\\*" -Destination $destinationBack -Recurse -Force
-                    echo "Backend desplegado correctamente en $destinationBack"
-                    '''
+                    //powershell '''
+                    //$sourceBack = "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\pipeline-release\\estimacion-proyecto\\publish_output"
+                    //$destinationBack = "C:\\Users\\Administrator\\Documents\\Sites\\TestProyect\\Back"
+					//
+                    //if (!(Test-Path $destinationBack)) {
+                    //    New-Item -ItemType Directory -Path $destinationBack -Force
+                    //}
+					//
+                    //Copy-Item -Path "$sourceBack\\*" -Destination $destinationBack -Recurse -Force
+                    //echo "Backend desplegado correctamente en $destinationBack"
+                    //'''
                 }
             }
         }
