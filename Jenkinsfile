@@ -45,6 +45,37 @@ pipeline {
             }
         }
 
+        stage('Preparar Despliegue') {
+            steps {
+                script {
+                    echo 'Deteniendo IIS y limpiando espacio...'
+                    powershell '''
+                    # Detener IIS antes de eliminar archivos
+                    Stop-Website -Name "TestProject"
+                    Stop-Service -Name W3SVC
+
+                    # Limpiar workspace de Jenkins
+                    echo "Eliminando workspace de Jenkins..."
+                    Remove-Item -Path "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\*" -Recurse -Force -ErrorAction SilentlyContinue
+
+                    # Limpiar frontend y backend en el servidor
+                    $destinationFront = "C:\\Users\\Administrator\\Documents\\Sites\\TestProyect\\Front"
+                    $destinationBack = "C:\\Users\\Administrator\\Documents\\Sites\\TestProyect\\Back"
+
+                    echo "Eliminando archivos previos en el frontend..."
+                    if (Test-Path $destinationFront) {
+                        Get-ChildItem -Path $destinationFront -Recurse | Remove-Item -Force -Recurse -ErrorAction SilentlyContinue
+                    }
+
+                    echo "Eliminando archivos previos en el backend..."
+                    if (Test-Path $destinationBack) {
+                        Get-ChildItem -Path $destinationBack -Recurse | Remove-Item -Force -Recurse -ErrorAction SilentlyContinue
+                    }
+                    '''
+                }
+            }
+        }
+
         stage('Desplegar en IIS') {
             steps {
                 script {
@@ -59,7 +90,6 @@ pipeline {
                         New-Item -ItemType Directory -Path $destinationFront -Force
                     }
 
-                    Get-ChildItem -Path $destinationFront -Recurse | Remove-Item -Force -Recurse
                     Copy-Item -Path "$sourceFront\\*" -Destination $destinationFront -Recurse -Force
                     echo "Frontend desplegado correctamente en $destinationFront"
                     '''
@@ -73,9 +103,20 @@ pipeline {
                         New-Item -ItemType Directory -Path $destinationBack -Force
                     }
 
-                    Get-ChildItem -Path $destinationBack -Recurse | Remove-Item -Force -Recurse
                     Copy-Item -Path "$sourceBack\\*" -Destination $destinationBack -Recurse -Force
                     echo "Backend desplegado correctamente en $destinationBack"
+                    '''
+                }
+            }
+        }
+
+        stage('Reiniciar IIS') {
+            steps {
+                script {
+                    echo 'Reiniciando IIS...'
+                    powershell '''
+                    Start-Service -Name W3SVC
+                    Start-Website -Name "TestProject"
                     '''
                 }
             }
