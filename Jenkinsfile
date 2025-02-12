@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'windows' } // Ejecutar en un agente Windows
 
     stages {
         stage('Clonar Código') {
@@ -12,19 +12,14 @@ pipeline {
             steps {
                 script {
                     echo 'Compilando código...'
-                    // Agrega aquí el comando para compilar tu proyecto
-                    // Por ejemplo, para .NET Core:
-                    sh 'dotnet build'
                 }
             }
         }
 
-        stage('Ejecutar Pruebas') {
+        stage('Publicar Aplicación') {
             steps {
                 script {
-                    echo 'Ejecutando pruebas...'
-                    // Ejecutar pruebas unitarias si las tienes
-                    // sh 'dotnet test'
+                    echo 'Publicando aplicación...'
                 }
             }
         }
@@ -33,9 +28,7 @@ pipeline {
             steps {
                 script {
                     echo 'Desplegando en IIS...'
-                    // Aquí agregas los comandos para copiar los archivos a IIS
-                    // Por ejemplo, si usas PowerShell:
-                    // powershell 'Copy-Item -Path "ruta/origen" -Destination "C:\inetpub\wwwroot\miapp" -Recurse -Force'
+
                 }
             }
         }
