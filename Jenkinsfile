@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'windows' } // Ejecutar en un agente Windows
+    agent any
 
     stages {
         stage('Clonar Código') {
