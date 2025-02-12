@@ -17,8 +17,7 @@ pipeline {
                 script {
                     echo 'Instalando dependencias...'
                     dir('frontend/proyectos-frontend') {
-                        sh 'npm install'
-						sh 'npm run build'
+                        bat 'npm install'
                     }
                 }
             }
@@ -29,7 +28,7 @@ pipeline {
                 script {
                     echo 'Compilando Angular...'
                     dir('frontend/proyectos-frontend') {
-                        sh 'ng build --configuration production'
+                        bat 'ng build --configuration production'
                     }
                 }
             }
@@ -41,22 +40,24 @@ pipeline {
                     echo 'Desplegando en IIS...'
 
                     // Copiar SOLO los archivos del frontend generados
-                    powershell '''
-                    $source = "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\pipeline-release\\frontend\\proyectos-frontend\\dist\\proyectos-frontend\\browser"
-                    $destination = "C:\\Users\\Administrator\\Documents\\Sites\\TestProyect\\Front"
+                    bat '''
+                    powershell -Command "& {
+                        $source = 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\pipeline-release\\frontend\\proyectos-frontend\\dist\\proyectos-frontend\\browser'
+                        $destination = 'C:\\Users\\Administrator\\Documents\\Sites\\TestProyect\\Front'
 
-                    # Crear el destino si no existe
-                    if (!(Test-Path $destination)) {
-                        New-Item -ItemType Directory -Path $destination -Force
-                    }
+                        # Crear el destino si no existe
+                        if (!(Test-Path $destination)) {
+                            New-Item -ItemType Directory -Path $destination -Force
+                        }
 
-                    # Eliminar archivos anteriores en el destino
-                    Get-ChildItem -Path $destination -Recurse | Remove-Item -Force -Recurse
+                        # Eliminar archivos anteriores en el destino
+                        Get-ChildItem -Path $destination -Recurse | Remove-Item -Force -Recurse
 
-                    # Copiar solo los archivos del frontend compilado
-                    Copy-Item -Path "$source\\*" -Destination $destination -Recurse -Force
+                        # Copiar solo los archivos del frontend compilado
+                        Copy-Item -Path "$source\\*" -Destination $destination -Recurse -Force
 
-                    echo "Archivos copiados correctamente a $destination"
+                        Write-Host 'Archivos copiados correctamente a $destination'
+                    }"
                     '''
                 }
             }
