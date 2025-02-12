@@ -45,15 +45,15 @@ pipeline {
                         $source = 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\pipeline-release\\frontend\\proyectos-frontend\\dist\\proyectos-frontend\\browser'
                         $destination = 'C:\\Users\\Administrator\\Documents\\Sites\\TestProyect\\Front'
 
-                        # Crear el destino si no existe
+                        // Crear el destino si no existe
                         if (!(Test-Path $destination)) {
                             New-Item -ItemType Directory -Path $destination -Force
                         }
 
-                        # Eliminar archivos anteriores en el destino
+                        // Eliminar archivos anteriores en el destino
                         Get-ChildItem -Path $destination -Recurse | Remove-Item -Force -Recurse
 
-                        # Copiar solo los archivos del frontend compilado
+                        // Copiar solo los archivos del frontend compilado
                         Copy-Item -Path "$source\\*" -Destination $destination -Recurse -Force
 
                         Write-Host 'Archivos copiados correctamente a $destination'
