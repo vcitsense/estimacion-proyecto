@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 import { ModulesComponent } from './modules/modules.component';
 import { HistoriasUsuariosComponent } from './historias-usuarios/historias-usuarios.component';
 import { ActividadesComponent } from './actividades/actividades.component';
+import { ProyeccionComponent } from './proyeccion/proyeccion.component';
 
 @Component({
   selector: 'app-administrar-proyecto',
@@ -20,7 +21,8 @@ import { ActividadesComponent } from './actividades/actividades.component';
         CommonModule,
         ModulesComponent,
         HistoriasUsuariosComponent,
-        ActividadesComponent
+        ActividadesComponent,
+        ProyeccionComponent
       ],
   templateUrl: './administrar-proyecto.component.html',
   styleUrl: './administrar-proyecto.component.css'

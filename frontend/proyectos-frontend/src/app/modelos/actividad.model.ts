@@ -10,4 +10,5 @@ export class ActividadModel extends AuditoriaModel {
     pruebas: number = 0;
     devops: number = 0;
     disenoGrafico: number = 0;
+    total: number = 0;
 }

@@ -83,6 +83,7 @@ export class ActividadesComponent {
     const selectElement = event.target as HTMLSelectElement;
     const selectedId = selectElement.value;
     this.consultarHistoriasUsuario(+selectedId);
+    this.actividades = [];
     // Aquí puedes llamar a un servicio o hacer algo con el ID seleccionado
   }
 

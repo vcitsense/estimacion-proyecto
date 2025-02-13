@@ -43,6 +43,7 @@ namespace estimacion_proyecto.domain.Dto
         public decimal DisenoGrafico { get; set; }
 
 
+
     }
 
 }

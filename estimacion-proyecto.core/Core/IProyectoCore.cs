@@ -60,6 +60,13 @@ namespace estimacion_proyecto.core.Core
         /// <returns>List<ProyectoDto</returns>
         GeneralResponse UpsertModulo(ModuloDto input);
 
+        /// <summary>
+        /// Consultar consultar proyeccion proyecto
+        /// </summary>
+        /// <param name="idProyecto"></param>
+        /// <returns>ProyeccionModelo</returns>
+        GeneralResponse ConsutarProyeccion(int idProyecto);
+
         #endregion
 
         #region HistoriasUsuario

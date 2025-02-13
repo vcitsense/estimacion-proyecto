@@ -1,4 +1,5 @@
 ﻿using estimacion_proyecto.domain.Dto;
+using estimacion_proyecto.domain.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -196,6 +197,57 @@ namespace estimacion_proyecto.data
             }
         }
 
+        /// <summary>
+        /// Consultar consultar proyeccion proyecto
+        /// </summary>
+        /// <param name="idProyecto"></param>
+        /// <returns>ProyeccionModelo</returns>
+        public ProyeccionModelo ConsutarProyeccion(int idProyecto)
+        {
+            try
+            {
+                var result = new ProyeccionModelo();
+
+                var modulosDb = _DbContext.Modulos.Where(x => x.IdProyecto == idProyecto).ToList();
+
+                modulosDb?.All(x =>
+                {
+                    var huDb = _DbContext.HistoriasUsuario.Where(w => w.IdModulo == x.IdModulo).ToList();
+                    var huResultList = new List<HistoriaUsuarioModel>();                
+
+                    huDb?.All(hu =>
+                    {
+                        var actividadesDb = _DbContext.Actividades.Where(a => a.IdHistoriaUsuario == hu.IdHistoriaUsuario).ToList();
+                        var huActual = new HistoriaUsuarioModel(hu, actividadesDb);
+                        huActual.Actividades = new List<ActividadModel>();
+
+                        actividadesDb?.All(a =>
+                        {
+                            huActual.Actividades.Add(new ActividadModel(a));
+                            return true;
+                        });
+
+                        huResultList.Add(huActual);
+
+                        return true;
+                    });
+
+                    var module = new ModuloModel(x, huResultList);
+                    module.HistoriasUsuario = huResultList;
+                    result.Modulos.Add(module);
+                    result.Total += module.Total;
+                    return true;
+                });
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw;
+
+            }
+        }
+
         #endregion
 
         #region HistoriasUsuario
@@ -344,6 +396,8 @@ namespace estimacion_proyecto.data
 
 
         #endregion
+
+
 
     }
 

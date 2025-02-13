@@ -126,6 +126,18 @@ namespace estimacion_proyecto.Controllers
             }
         }
 
+        /// <summary>
+        /// Consultar consultar proyeccion proyecto
+        /// </summary>
+        /// <param name="idProyecto"></param>
+        /// <returns>ProyeccionModelo</returns>
+        [HttpGet]
+        [Route("ConsutarProyeccion")]
+        public async Task<ActionResult<GeneralResponse>> ConsutarProyeccion(int idProyecto)
+        {
+            return Ok(_proyectoCore.ConsutarProyeccion(idProyecto));
+        }
+
 
         #endregion
 

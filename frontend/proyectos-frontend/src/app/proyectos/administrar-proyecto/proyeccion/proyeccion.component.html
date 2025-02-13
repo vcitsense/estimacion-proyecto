@@ -1,0 +1,72 @@
+
+@if (proyeccion) 
+{
+    <div>
+        <br><h4>{{proyeccion.total}} Horas</h4> <br>
+    </div>
+    <div class="card  border-primary mb-3" *ngFor="let modulo of proyeccion.modulos; let i = index">
+        <div class="card-header">
+         <b>MÓDULO  {{modulo.nombreModulo}}  - {{modulo.total}} Horas </b>
+        </div>
+        <div class="card-body">
+          
+            @if(modulo.historiasUsuario.length > 0)
+            {
+                <b>Historias Usuario</b>
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Tareas</th>
+                    </tr>
+                    </thead>
+            
+                    <tbody>
+                        <tr *ngFor="let hu of modulo.historiasUsuario; let i = index">
+                        <th scope="row">{{ hu.idHistoriaUsuario }}</th>
+                        <td>{{ hu.nombre }}</td>
+                        <td>{{ hu.descripcion }}</td>
+                        <td>{{ hu.total }} Horas</td>
+                        <td>
+
+                            @if(hu.actividades.length > 0)
+                            {
+                                <table class="table table-striped">
+                                    <thead class="table-primary">
+                                    <tr>
+                                        <th scope="col">Id</th>
+                                        <th scope="col">Descripción</th>
+                                        <th scope="col">Total</th>
+                                    </tr>
+                                    </thead>
+                            
+                                    <tbody>
+                                        <tr *ngFor="let act of hu.actividades; let i = index">
+                                        <th scope="row">{{ act.idActividad }}</th>
+                                        <td>{{ act.descripcion }}</td>
+                                        <td>{{ act.total }} Horas</td>
+                                        </tr>
+                                    </tbody>
+                            
+                                </table>
+                            }
+
+
+                        </td>    
+                        </tr>
+                    </tbody>
+            
+                </table>
+            }
+            
+
+        </div>
+    </div>
+}
+@else
+{
+    <label>Sin registros....</label>
+}

@@ -50,6 +50,10 @@ export class UsuarioService {
     return this.http.post(this.baseUrl + "api/Proyecto/upsertModulo", input);
   }
 
+  consutarProyeccion(idProyecto: number): Observable<any> {
+    return this.http.get(this.baseUrl + "api/Proyecto/consutarProyeccion?idProyecto=" + idProyecto);
+  }
+
   //Historias Usuario  ===========================================================================================================
   consultarHistoriasUsuario(idModulo: number): Observable<any> {
     return this.http.get(this.baseUrl + "api/Proyecto/ConsultarHistoriasUsuario?idModulo=" + idModulo);

@@ -142,7 +142,15 @@ namespace estimacion_proyecto.core.Core
 
             try
             {
-                oReturn.Data = _proyectoDatos.ConsultarModulosPorProyecto(idProyecto);
+                var result = new List<ModuloModel>();
+                var data = _proyectoDatos.ConsultarModulosPorProyecto(idProyecto);
+
+                data?.All(x =>
+                {
+                    result.Add(new ModuloModel(x, ConsultarHistoriasUsuario(x.IdModulo).Data));
+                    return true;
+                });
+                oReturn.Data = result;
             }
             catch (Exception ex)
             {
@@ -176,6 +184,29 @@ namespace estimacion_proyecto.core.Core
             return oReturn;
         }
 
+        /// <summary>
+        /// Consultar consultar proyeccion proyecto
+        /// </summary>
+        /// <param name="idProyecto"></param>
+        /// <returns>ProyeccionModelo</returns>
+        public GeneralResponse ConsutarProyeccion(int idProyecto)
+        {
+            var oReturn = new GeneralResponse();
+
+            try
+            {
+                oReturn.Data = _proyectoDatos.ConsutarProyeccion(idProyecto);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                oReturn.Message = "Error Procesando Solicitud";
+                oReturn.Status = (int)Enumerations.enumTypeMessageResponse.Error;
+            }
+
+            return oReturn;
+        }
+
 
 
         #endregion
@@ -192,7 +223,18 @@ namespace estimacion_proyecto.core.Core
 
             try
             {
-                oReturn.Data = _proyectoDatos.ConsultarHistoriasUsuario(idModulo);
+                var result = new List<HistoriaUsuarioModel>();
+                var data = _proyectoDatos.ConsultarHistoriasUsuario(idModulo);
+
+                data?.All(x =>
+                {
+                    result.Add(new HistoriaUsuarioModel(x, _proyectoDatos.ConsultarActividadesPorHistoriaUsuario(x.IdHistoriaUsuario)));
+                    return true;
+                });
+
+                oReturn.Data = result;
+
+
             }
             catch (Exception ex)
             {
@@ -214,7 +256,16 @@ namespace estimacion_proyecto.core.Core
 
             try
             {
-                oReturn.Data = _proyectoDatos.UpsertHistoriaUsuario(input);
+                var result = new List<HistoriaUsuarioModel>();
+                var data = _proyectoDatos.UpsertHistoriaUsuario(input);
+
+                data?.All(x =>
+                {
+                    result.Add(new HistoriaUsuarioModel(x, _proyectoDatos.ConsultarActividadesPorHistoriaUsuario(x.IdHistoriaUsuario)));
+                    return true;
+                });
+
+                oReturn.Data = result;
             }
             catch (Exception ex)
             {
@@ -241,8 +292,17 @@ namespace estimacion_proyecto.core.Core
             var oReturn = new GeneralResponse();
 
             try
-            {
-                oReturn.Data = _proyectoDatos.ConsultarActividadesPorHistoriaUsuario(idHistoriaUsuario);
+            {   var result = new List<ActividadModel>();
+
+                var data = _proyectoDatos.ConsultarActividadesPorHistoriaUsuario(idHistoriaUsuario);
+
+                data?.All(x =>
+                {
+                    result.Add(new ActividadModel(x));
+                    return true;
+                });
+
+                oReturn.Data = result;
             }
             catch (Exception ex)
             {
@@ -264,7 +324,19 @@ namespace estimacion_proyecto.core.Core
 
             try
             {
+                var result = new List<ActividadModel>();
+
                 oReturn.Data = _proyectoDatos.UpsertActividad(input);
+
+                var data = _proyectoDatos.UpsertActividad(input);
+
+                data?.All(x =>
+                {
+                    result.Add(new ActividadModel(x));
+                    return true;
+                });
+
+                oReturn.Data = result;
             }
             catch (Exception ex)
             {

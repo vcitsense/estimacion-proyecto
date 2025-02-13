@@ -1,4 +1,5 @@
 ﻿using estimacion_proyecto.domain.Dto;
+using estimacion_proyecto.domain.Response;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -59,6 +60,13 @@ namespace estimacion_proyecto.data
         /// </summary>
         /// <returns>List<ProyectoDto</returns>
         public List<ModuloDto> UpsertModulo(ModuloDto input);
+
+        /// <summary>
+        /// Consultar consultar proyeccion proyecto
+        /// </summary>
+        /// <param name="idProyecto"></param>
+        /// <returns>ProyeccionModelo</returns>
+        public ProyeccionModelo ConsutarProyeccion(int idProyecto);
 
 
         #endregion

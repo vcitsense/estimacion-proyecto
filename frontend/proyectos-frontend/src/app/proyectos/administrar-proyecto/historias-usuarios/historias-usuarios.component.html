@@ -29,6 +29,7 @@
             <th scope="col">Id</th>
             <th scope="col">Nombre</th>
             <th scope="col">Descripción</th>
+            <th scope="col">Total</th>
             <th scope="col">Editar</th>
         </tr>
         </thead>
@@ -38,6 +39,7 @@
             <th scope="row">{{ item.idHistoriaUsuario }}</th>
             <td>{{ item.nombre }}</td>
             <td>{{ item.descripcion }}</td>
+            <td>{{ item.total }} Horas</td>
             <td >
                 <img src="https://cdn-icons-png.flaticon.com/512/84/84380.png" (click)="abrirModalEditar(item)" width="30px" height="30px">
             </td>
