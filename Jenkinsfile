@@ -6,12 +6,18 @@ pipeline {
     }
 
     stages {
+	
+		stage('Clonar Código') {
+            steps {
+                git branch: 'master', url: 'https://github.com/vcitsense/estimacion-proyecto.git'
+            }
+        }
 		
 		stage('Ejecutar Pruebas') {
 			steps {
 				script {
 					echo 'Ejecutando pruebas con pytest...'
-					dir('estimacion-proyecto') {  // Asegúrate de que esta sea la ruta correcta de test.py
+					dir('estimacion-proyecto/tests') {  // Asegúrate de que esta sea la ruta correcta de test.py
 						bat 'pytest test.py --junitxml=test_results.xml'
 					}
 				}
