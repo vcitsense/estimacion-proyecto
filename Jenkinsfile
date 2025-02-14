@@ -17,7 +17,7 @@ pipeline {
 			steps {
 				script {
 					echo 'Ejecutando pruebas con pytest...'
-					dir('estimacion-proyecto/tests') {  // Asegúrate de que esta sea la ruta correcta de test.py
+					dir('tests') {  // Asegúrate de que esta sea la ruta correcta de test.py
 						bat 'pytest test.py --junitxml=test_results.xml'
 					}
 				}
@@ -29,7 +29,7 @@ pipeline {
 				script {
 					echo 'Publicando resultados de pruebas en Jenkins...'
 				}
-				junit 'estimacion-proyecto/tests/test_results.xml'  // Asegúrate de que el path sea correcto
+				junit 'tests/test_results.xml'  // Asegúrate de que el path sea correcto
 			}
 		}
 
