@@ -1,6 +1,9 @@
 import pytest
 import requests
-import xml.etree.ElementTree as ET
+import logging
+
+# Configurar logging
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 base_url = "http://52.205.206.106:9905/api/Proyecto/"
 
@@ -12,46 +15,17 @@ apis = [
     "ConsultarHistoriasUsuario?idModulo=1"
 ]
 
-# Prepare XML structure
-testsuites = ET.Element("testsuites")
-testsuite = ET.SubElement(testsuites, "testsuite", name="pytest", errors="0", failures="0", skipped="0", tests="21", time="0.181", timestamp="2024-12-01T04:51:11.422039+00:00", hostname="8e83d85069cd")
-
-# Usar parametrize para pasar las rutas de la API a la función de prueba
 @pytest.mark.parametrize("api_url", apis)
 def test_api(api_url):
+    """ Prueba cada endpoint verificando el código de respuesta HTTP """
+    url = f"{base_url}{api_url}"
+    logging.info(f"Probando API: {url}")
+
     try:
-        # Realizar la solicitud GET a la API
-        response = requests.get(f"{base_url}{api_url}")
-        
-         # Add the response details to the testcase
-        status_code = str(response.status_code)
-        response_text = response.text
-        
-        # Crear el nombre del caso de prueba
-        testcase = ET.SubElement(testsuite, "testcase", classname="test", name=f"test_api{api_url}", time="0.001")
-        
-        status_ = ET.SubElement(testsuite, "status", classname="test", name=f"status_cod={status_code}", time="0.001")
-        
-        result_ = ET.SubElement(testsuite, "result", classname="test", name=f"result_={response_text}", time="0.001")
+        response = requests.get(url)
+        logging.info(f"Respuesta [{response.status_code}]: {response.text[:200]}")  # Muestra solo los primeros 200 caracteres
 
-       
-        
-        # Add status details to the testcase node
-        status = ET.SubElement(testcase, "status", code=status_code, response=response_text)
-        
-        # Update errors and failures based on the response status
-        if response.status_code >= 400:
-            testsuite.set("failures", str(int(testsuite.attrib["failures"]) + 1))
-        elif response.status_code == 0:
-            testsuite.set("errors", str(int(testsuite.attrib["errors"]) + 1))
-
+        assert response.status_code == 200, f"Error en {url}: Código {response.status_code}"
+    
     except requests.exceptions.RequestException as e:
-        testcase = ET.SubElement(testsuite, "testcase", classname="test", name=f"test_api{api_url}", time="0.001")
-        ET.SubElement(testcase, "status", code="Error", response=str(e))
-        testsuite.set("errors", str(int(testsuite.attrib["errors"]) + 1))
-
-# Write the updated XML to file
-tree = ET.ElementTree(testsuites)
-tree.write("test_result.xml", encoding="UTF-8", xml_declaration=True)
-
-
+        pytest.fail(f"Error de conexión a {url}: {str(e)}")
