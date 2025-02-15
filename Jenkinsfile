@@ -37,12 +37,12 @@ pipeline {
 
         stage('Compilar Backend .NET') {
             steps {
-                // script {
-                //     echo 'Compilando Backend .NET...'
-                //     dir('estimacion-proyecto') {
-                //         bat 'dotnet publish -c Release -r win-x64 --self-contained true -o publish_output'
-                //     }
-                // }
+                script {
+                    echo 'Compilando Backend .NET...'
+                    // dir('estimacion-proyecto') {
+                    //     bat 'dotnet publish -c Release -r win-x64 --self-contained true -o publish_output'
+                    // }
+                }
             }
         }
 
