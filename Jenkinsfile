@@ -39,7 +39,7 @@ pipeline {
             steps {
                 script {
                     echo 'Compilando Backend .NET...'
-					
+
                     // dir('estimacion-proyecto') {
                     //     bat 'dotnet publish -c Release -r win-x64 --self-contained true -o publish_output'
                     // }
@@ -56,7 +56,7 @@ pipeline {
 
                     # Limpiar workspace de Jenkins
                     echo "Eliminando workspace de Jenkins..."
-                    Remove-Item -Path "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\*" -Recurse -Force -ErrorAction SilentlyContinue
+                    #Remove-Item -Path "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\*" -Recurse -Force -ErrorAction SilentlyContinue
 
                     # Limpiar frontend y backend en el servidor
                     $destinationFront = "C:\\Users\\Administrator\\Documents\\Sites\\TestProyect\\Front"
