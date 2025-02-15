@@ -13,8 +13,7 @@ apis = [
     "ConsultarProyectosPorEntidad?idEntidad=1",
     "ConsultarModulosPorProyecto?idProyecto=1",
     "ConsultarHistoriasUsuario?idModulo=1",
-    "ConsultarActividadesPorHistoriaUsuario?idHistoriaUsuario=1",
-    "ConsultarActividadesPorHiriaUsuario?idHistoriaUsuario=1"
+    "ConsultarActividadesPorHistoriaUsuario?idHistoriaUsuario=1"
 ]
 
 @pytest.mark.parametrize("api_url", apis)
