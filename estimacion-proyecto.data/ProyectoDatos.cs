@@ -438,7 +438,7 @@ namespace estimacion_proyecto.data
                     consultaDb.Perfil = input.Perfil;
                     consultaDb.Cantidad = input.Cantidad;
                     consultaDb.CostoHora = input.CostoHora;
-                    consultaDb.PorcentajeAsignacion = input.PorcentajeAsignacion;
+                    consultaDb.CostoTotal = input.CostoTotal;
                     consultaDb.PorcentajeAsignacion = input.PorcentajeAsignacion;
                 }
 

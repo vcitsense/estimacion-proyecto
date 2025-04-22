@@ -27,6 +27,7 @@ export class CostoPerfilComponent {
   mensaje: MensajeModel = new MensajeModel();
   idModuloSeleccionado: number = 0;
   idProyectoSeleccionado: number = 0
+  totalCost: number = 0;
 
   costoPerfil: CostoPerfilModel[] = [];
   costoPerfileleccionado: CostoPerfilModel = new CostoPerfilModel();
@@ -57,6 +58,11 @@ export class CostoPerfilComponent {
         if(response.status == 200)
         {
           this.costoPerfil = response.data;
+
+          if(this.costoPerfil.length > 0)
+          {
+            this.totalCost = this.costoPerfil[0].total;
+          }
 
         }
     
@@ -114,7 +120,7 @@ export class CostoPerfilComponent {
     upsertCostoPerfilPorProyecto()
     {
       this.mensaje.ver = false;
-      
+
       if(!this.validarPorcentaje())
       {
         this.mensaje.codigo = 500
@@ -137,6 +143,11 @@ export class CostoPerfilComponent {
             {
               this.costoPerfil = response.data;
               this.costoPerfileleccionado = new CostoPerfilModel();
+
+              if(this.costoPerfil.length > 0)
+                {
+                  this.totalCost = this.costoPerfil[0].total;
+                }
             }
     
           },

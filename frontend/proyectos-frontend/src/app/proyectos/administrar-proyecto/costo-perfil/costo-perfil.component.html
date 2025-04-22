@@ -33,9 +33,9 @@
                 <tr *ngFor="let item of costoPerfil; let i = index">
                 <td>{{ item.perfilNombre }}</td>
                 <td>{{ item.cantidad }}</td>
-                <td>${{ item.costoHora }}</td>
+                <td>{{ item.costoHora  | currency:'':'symbol':'1.2-2' }}</td>
                 <td>{{ item.porcentajeAsignacion }}%</td>
-                <td>${{ item.costoTotal }}</td>
+                <td>{{ item.costoTotal  | currency:'':'symbol':'1.2-2' }}</td>
                 <td >
                     <img src="https://cdn-icons-png.flaticon.com/512/84/84380.png" (click)="abrirModalEditar(item)" width="30px" height="30px">
                 </td>
@@ -43,6 +43,12 @@
             </tbody>
 
         </table>
+
+        @if (costoPerfil.length > 0) 
+        {
+            <h5>Total: {{totalCost  | currency:'':'symbol':'1.2-2'}}</h5>
+        }
+        
 
     </div>
 

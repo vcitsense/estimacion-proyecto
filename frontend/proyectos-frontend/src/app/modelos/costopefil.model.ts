@@ -9,5 +9,6 @@ export class CostoPerfilModel {
     costoHora: number = 0;
     porcentajeAsignacion: number = 0;
     costoTotal: number = 0;
+    total: number = 0;
 }
 

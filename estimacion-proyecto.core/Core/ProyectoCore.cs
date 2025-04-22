@@ -380,7 +380,10 @@ namespace estimacion_proyecto.core.Core
                         oResult.Add(new CostoPerfilModelo(x, itemsPerfil));
                         return true;
                     });
+
+                    oResult.FirstOrDefault().Total = oResult.Sum(x => x.CostoTotal);
                 }
+
 
                 oReturn.Data = oResult;
 
@@ -420,6 +423,8 @@ namespace estimacion_proyecto.core.Core
                         oResult.Add(new CostoPerfilModelo(x, itemsPerfil));
                         return true;
                     });
+
+                    oResult.FirstOrDefault().Total = oResult.Sum(x => x.CostoTotal);
                 }
 
                 oReturn.Data = oResult;

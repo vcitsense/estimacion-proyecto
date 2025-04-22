@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto\bin\Release\net8.0\publish\</_PublishTargetUrl>
-    <History>True|2025-02-13T04:18:40.3206877Z||;True|2025-02-12T00:11:33.9890542-05:00||;True|2025-02-11T23:35:22.7371542-05:00||;True|2025-02-03T17:23:35.9195622-05:00||;True|2025-02-03T17:23:32.6748155-05:00||;True|2025-02-03T17:11:46.7974687-05:00||;True|2025-02-03T17:11:11.0827244-05:00||;True|2025-02-01T18:30:19.0779253-05:00||;</History>
+    <History>True|2025-04-22T22:23:44.3645589Z||;True|2025-04-22T16:22:30.0541325-05:00||;True|2025-02-12T23:18:40.3206877-05:00||;True|2025-02-12T00:11:33.9890542-05:00||;True|2025-02-11T23:35:22.7371542-05:00||;True|2025-02-03T17:23:35.9195622-05:00||;True|2025-02-03T17:23:32.6748155-05:00||;True|2025-02-03T17:11:46.7974687-05:00||;True|2025-02-03T17:11:11.0827244-05:00||;True|2025-02-01T18:30:19.0779253-05:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
