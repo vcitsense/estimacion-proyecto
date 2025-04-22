@@ -352,5 +352,119 @@ namespace estimacion_proyecto.core.Core
 
         #endregion
 
+
+        #region ProyectoCosto
+
+
+        /// <summary>
+        /// Consultar costo por proyecto
+        /// </summary>
+        /// <param name="idEntidad"></param>
+        /// <returns>List<ProyectoCostoPerfilDto</returns>
+        public GeneralResponse ConsultarCostoPerfilPorProyecto(int idProyecto)
+        {
+            var oReturn = new GeneralResponse();
+
+            try
+            {
+                var dataDb = _proyectoDatos.ConsultarCostoPerfilPorProyecto(idProyecto);
+
+                List<CostoPerfilModelo> oResult = new List<CostoPerfilModelo>();
+
+                if (dataDb.Count > 0)
+                {
+                    var itemsPerfil = _proyectoDatos.ConsultarItemsPorCatalogo(1);
+
+                    dataDb?.All(x =>
+                    {
+                        oResult.Add(new CostoPerfilModelo(x, itemsPerfil));
+                        return true;
+                    });
+                }
+
+                oReturn.Data = oResult;
+
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                oReturn.Message = "Error Procesando Solicitud";
+                oReturn.Status = (int)Enumerations.enumTypeMessageResponse.Error;
+            }
+
+            return oReturn;
+        }
+
+        /// <summary>
+        /// UpsertrCostoPerfilPorProyecto
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>List<ProyectoCostoPerfilDto></returns>
+        public GeneralResponse UpsertCostoPerfilPorProyecto(ProyectoCostoPerfilDto input)
+        {
+            var oReturn = new GeneralResponse();
+
+            try
+            {
+                List<CostoPerfilModelo> oResult = new List<CostoPerfilModelo>();
+
+                var dataDb = _proyectoDatos.UpsertCostoPerfilPorProyecto(input);
+
+                if (dataDb.Count > 0)
+                {
+                    var itemsPerfil = _proyectoDatos.ConsultarItemsPorCatalogo(1);
+
+                    dataDb?.All(x =>
+                    {
+                        oResult.Add(new CostoPerfilModelo(x, itemsPerfil));
+                        return true;
+                    });
+                }
+
+                oReturn.Data = oResult;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                oReturn.Message = "Error Procesando Solicitud";
+                oReturn.Status = (int)Enumerations.enumTypeMessageResponse.Error;
+            }
+
+            return oReturn;
+        }
+
+        #endregion
+
+
+        #region Catalogos
+
+        /// <summary>
+        /// ConsultarItemsPorCatalogo
+        /// </summary>
+        /// <param name="idCatalogo">idCatalogo</param>
+        /// <returns>List<ItemDto</returns>
+        public GeneralResponse ConsultarItemsPorCatalogo(int idCatalogo)
+        {
+            var oReturn = new GeneralResponse();
+
+            try
+            {
+                oReturn.Data = _proyectoDatos.ConsultarItemsPorCatalogo(idCatalogo);
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                oReturn.Message = "Error Procesando Solicitud";
+                oReturn.Status = (int)Enumerations.enumTypeMessageResponse.Error;
+            }
+
+            return oReturn;
+        }
+
+
+        #endregion
+
     }
 }

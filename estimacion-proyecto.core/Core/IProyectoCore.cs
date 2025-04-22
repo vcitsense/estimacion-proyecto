@@ -102,5 +102,34 @@ namespace estimacion_proyecto.core.Core
 
         #endregion
 
+        #region ProyectoCosto
+
+        /// <summary>
+        /// Consultar costo por proyecto
+        /// </summary>
+        /// <param name="idEntidad"></param>
+        /// <returns>List<ProyectoCostoPerfilDto</returns>
+        GeneralResponse ConsultarCostoPerfilPorProyecto(int idProyecto);
+
+        /// <summary>
+        /// UpsertrCostoPerfilPorProyecto
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>List<ProyectoCostoPerfilDto></returns>
+        GeneralResponse UpsertCostoPerfilPorProyecto(ProyectoCostoPerfilDto input);
+
+        #endregion
+
+        #region Catalogo
+
+        /// <summary>
+        /// ConsultarItemsPorCatalogo
+        /// </summary>
+        /// <param name="idCatalogo">idCatalogo</param>
+        /// <returns>List<ItemDto</returns>
+        GeneralResponse ConsultarItemsPorCatalogo(int idCatalogo);
+
+        #endregion
+
     }
 }

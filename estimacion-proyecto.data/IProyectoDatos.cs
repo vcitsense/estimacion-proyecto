@@ -104,5 +104,35 @@ namespace estimacion_proyecto.data
         List<ActividadDto> UpsertActividad(ActividadDto input);
 
         #endregion
+
+        #region ProyectoCosto
+
+
+        /// <summary>
+        /// Consultar costo por proyecto
+        /// </summary>
+        /// <param name="idEntidad"></param>
+        /// <returns>List<ProyectoCostoPerfilDto</returns>
+        List<ProyectoCostoPerfilDto> ConsultarCostoPerfilPorProyecto(int idProyecto);
+
+        /// <summary>
+        /// UpsertrCostoPerfilPorProyecto
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>List<ProyectoCostoPerfilDto></returns>
+        List<ProyectoCostoPerfilDto> UpsertCostoPerfilPorProyecto(ProyectoCostoPerfilDto input);
+
+        #endregion
+
+        #region Catalogos
+
+        /// <summary>
+        /// ConsultarItemsPorCatalogo
+        /// </summary>
+        /// <param name="idCatalogo">idCatalogo</param>
+        /// <returns>List<ItemDto</returns>
+        List<ItemDto> ConsultarItemsPorCatalogo(int idCatalogo);
+
+        #endregion
     }
 }

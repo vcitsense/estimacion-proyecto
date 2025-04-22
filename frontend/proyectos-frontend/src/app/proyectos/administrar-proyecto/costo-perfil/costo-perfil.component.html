@@ -1,0 +1,113 @@
+<app-mensaje [mensaje]="mensaje"></app-mensaje>
+
+
+    <div class="container">
+
+
+        <br>
+        
+        <div style="
+            display: flex;
+            justify-content: end;
+        ">
+            <div class="mb-3">
+                <button class="btn btn-primary btn-lg" (click)="abrirModalCrear()">Agregar</button>
+            </div>
+        </div>
+
+        <table class="table table-striped"
+            >
+            <thead class="table-dark">
+            <tr>
+                <th scope="col">Perfil</th>
+                <th scope="col">Cant. Personas</th>
+                <th scope="col">Costo Hora</th>
+                <th scope="col">Porcentaje Asignación</th>
+                <th scope="col">Costo Total</th>
+                <th scope="col">Editar</th>
+                
+            </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let item of costoPerfil; let i = index">
+                <td>{{ item.perfilNombre }}</td>
+                <td>{{ item.cantidad }}</td>
+                <td>${{ item.costoHora }}</td>
+                <td>{{ item.porcentajeAsignacion }}%</td>
+                <td>${{ item.costoTotal }}</td>
+                <td >
+                    <img src="https://cdn-icons-png.flaticon.com/512/84/84380.png" (click)="abrirModalEditar(item)" width="30px" height="30px">
+                </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <div class="modal" tabindex="-1" #upsertModal>
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">COSTO PERFIL</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              
+                <form >
+
+
+                    <div class="row">
+                        <div class="mb-3 col-6">
+                            <label class="form-label">Perfil</label>
+
+                            <select class="form-select"   [(ngModel)]="costoPerfileleccionado.perfil" name="perfil">
+                                <option  [value]="0">Seleccione</option>
+                                <option *ngFor="let option of perfiles" [value]="option.idItem">{{ option.nombre }}</option>
+                            </select>
+
+                        </div>
+    
+                        <div class="mb-3 col-6">
+                            <label class="form-label">Cantidad Personas</label>
+                            <input type="number" class="form-control" [(ngModel)]="costoPerfileleccionado.cantidad" name="cantidad" required>
+                        </div>
+                    </div>
+
+                    
+                    <div class="row">
+
+                        <div class="mb-3  col-6">
+                            <label class="form-label">Costo x Hora</label>
+                            <input type="number" class="form-control" [(ngModel)]="costoPerfileleccionado.costoHora" name="costoHora" required>
+                        </div>
+    
+                        <div class="mb-3  col-6">
+                            <label class="form-label">Procentaje Asignación %</label>
+                            <input type="number" class="form-control" [(ngModel)]="costoPerfileleccionado.porcentajeAsignacion" (keyup)="calculateTotal()" name="porcentajeAsignacion" required>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="mb-3  col-6">
+                            <label class="form-label">Costo Total</label>
+                            <input type="number" class="form-control" [(ngModel)]="costoPerfileleccionado.costoTotal" name="costoTotal" required disabled>
+                        </div>
+    
+           
+                    </div>
+                   
+                </form>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" (click)="upsertCostoPerfilPorProyecto()">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>

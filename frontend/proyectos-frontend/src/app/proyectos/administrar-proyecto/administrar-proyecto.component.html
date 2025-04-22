@@ -34,6 +34,10 @@
             <li class="nav-item">
               <a class="nav-link" [ngClass]="{'active': tabSeleccionado === 4}" (click)="seleccionarTab(4)" aria-current="page">Estimación</a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="{'active': tabSeleccionado === 5}" (click)="seleccionarTab(5)" aria-current="page">Costos</a>
+            </li>
           </ul>
 
 
@@ -56,6 +60,13 @@
           {
             <app-proyeccion></app-proyeccion>
           }
+
+          @if (tabSeleccionado === 5) 
+          {
+            <app-costo-perfil></app-costo-perfil>
+          }
+
+          
           
 
     </div>

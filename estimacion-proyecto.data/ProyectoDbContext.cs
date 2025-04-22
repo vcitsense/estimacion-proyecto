@@ -25,8 +25,10 @@ namespace estimacion_proyecto.data
         public DbSet<ActividadDto> Actividades { get; set; }
         public DbSet<ProyectoNavegadorDto> ProyectoNavegadores { get; set; }
 
+        public DbSet<ProyectoCostoPerfilDto> ProyectoCostoPerfil { get; set; }
+        public DbSet<ItemDto> Items { get; set; }
 
-        
+
         public class YourDbContextFactory : IDesignTimeDbContextFactory<ProyectoDbContext>
         {
             public ProyectoDbContext CreateDbContext(string[] args)

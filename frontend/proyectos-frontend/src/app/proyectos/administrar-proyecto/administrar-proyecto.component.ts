@@ -10,6 +10,7 @@ import { ModulesComponent } from './modules/modules.component';
 import { HistoriasUsuariosComponent } from './historias-usuarios/historias-usuarios.component';
 import { ActividadesComponent } from './actividades/actividades.component';
 import { ProyeccionComponent } from './proyeccion/proyeccion.component';
+import { CostoPerfilComponent } from './costo-perfil/costo-perfil.component';
 
 @Component({
   selector: 'app-administrar-proyecto',
@@ -22,7 +23,8 @@ import { ProyeccionComponent } from './proyeccion/proyeccion.component';
         ModulesComponent,
         HistoriasUsuariosComponent,
         ActividadesComponent,
-        ProyeccionComponent
+        ProyeccionComponent,
+        CostoPerfilComponent
       ],
   templateUrl: './administrar-proyecto.component.html',
   styleUrl: './administrar-proyecto.component.css'

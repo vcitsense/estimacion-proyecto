@@ -397,6 +397,86 @@ namespace estimacion_proyecto.data
 
         #endregion
 
+        #region ProyectoCosto
+
+
+        /// <summary>
+        /// Consultar costo por proyecto
+        /// </summary>
+        /// <param name="idEntidad"></param>
+        /// <returns>List<ProyectoCostoPerfilDto</returns>
+        public List<ProyectoCostoPerfilDto> ConsultarCostoPerfilPorProyecto(int idProyecto)
+        {
+            try
+            {
+                return _DbContext.ProyectoCostoPerfil.Where(x => x.IdProyecto == idProyecto).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw;
+
+            }
+        }
+
+        /// <summary>
+        /// UpsertrCostoPerfilPorProyecto
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>List<ProyectoCostoPerfilDto></returns>
+        public List<ProyectoCostoPerfilDto> UpsertCostoPerfilPorProyecto(ProyectoCostoPerfilDto input)
+        {
+            try
+            {
+                if (input.IdCosto == 0)
+                {
+                    _DbContext.ProyectoCostoPerfil.Add(input);
+                }
+                else
+                {
+                    var consultaDb = _DbContext.ProyectoCostoPerfil.Where(x => x.IdCosto == input.IdCosto).First();
+                    consultaDb.IdProyecto = input.IdProyecto;
+                    consultaDb.Perfil = input.Perfil;
+                    consultaDb.Cantidad = input.Cantidad;
+                    consultaDb.CostoHora = input.CostoHora;
+                    consultaDb.PorcentajeAsignacion = input.PorcentajeAsignacion;
+                    consultaDb.PorcentajeAsignacion = input.PorcentajeAsignacion;
+                }
+
+                _DbContext.SaveChanges();
+
+                return _DbContext.ProyectoCostoPerfil.Where(x => x.IdProyecto == input.IdProyecto).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw;
+
+            }
+        }
+
+        #endregion
+
+        #region Catalogos
+
+        /// <summary>
+        /// ConsultarItemsPorCatalogo
+        /// </summary>
+        /// <param name="idCatalogo">idCatalogo</param>
+        /// <returns>List<ItemDto</returns>
+        public List<ItemDto> ConsultarItemsPorCatalogo(int idCatalogo)
+        {
+            try
+            {
+                return _DbContext.Items.Where(x => x.IdCatalogo == idCatalogo).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw;
+
+            }
+        }
+
+        #endregion
+
 
 
     }

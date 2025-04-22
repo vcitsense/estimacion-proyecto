@@ -73,4 +73,20 @@ export class UsuarioService {
   upsertActividad(input: any): Observable<any> {
     return this.http.post(this.baseUrl + "api/Proyecto/upsertActividad", input);
   }
+
+  //Costo Perfil  ===========================================================================================================
+  consultarCostoPerfilPorProyecto(idProyecto: number): Observable<any> {
+    return this.http.get(this.baseUrl + "api/Proyecto/ConsultarCostoPerfilPorProyecto?idProyecto=" + idProyecto);
+  }
+
+
+  upsertCostoPerfilPorProyecto(input: any): Observable<any> {
+    return this.http.post(this.baseUrl + "api/Proyecto/UpsertCostoPerfilPorProyecto", input);
+  }
+
+
+  //Catalogos  ===========================================================================================================
+  consultarItemsPorCatalogo(idCatalogo: number): Observable<any> {
+    return this.http.get(this.baseUrl + "api/Proyecto/ConsultarItemsPorCatalogo?idCatalogo=" + idCatalogo);
+  }
 }

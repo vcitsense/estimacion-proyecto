@@ -213,6 +213,60 @@ namespace estimacion_proyecto.Controllers
 
         #endregion
 
+        #region ProyectoCosto
+
+        /// <summary>
+        /// Consultar costo por proyecto
+        /// </summary>
+        /// <param name="idEntidad"></param>
+        /// <returns>List<ProyectoCostoPerfilDto</returns>
+        [HttpGet]
+        [Route("ConsultarCostoPerfilPorProyecto")]
+        public async Task<ActionResult<GeneralResponse>> ConsultarCostoPerfilPorProyecto(int idProyecto)
+        {
+            return Ok(_proyectoCore.ConsultarCostoPerfilPorProyecto(idProyecto));
+        }
+
+
+        /// <summary>
+        /// UpsertrCostoPerfilPorProyecto
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>List<ProyectoCostoPerfilDto></returns>
+        [HttpPost]
+        [Route("UpsertCostoPerfilPorProyecto")]
+        public async Task<ActionResult<GeneralResponse>> UpsertCostoPerfilPorProyecto([FromBody] ProyectoCostoPerfilDto input)
+        {
+            try
+            {
+                return Ok(_proyectoCore.UpsertCostoPerfilPorProyecto(input));
+            }
+            catch (Exception ex)
+            {
+
+                return Unauthorized("Usuario invalido"); ;
+            }
+        }
+
+        #endregion
+
+        #region Catalogo
+
+        /// <summary>
+        /// ConsultarItemsPorCatalogo
+        /// </summary>
+        /// <param name="idCatalogo">idCatalogo</param>
+        /// <returns>List<ItemDto</returns>
+        [HttpGet]
+        [Route("ConsultarItemsPorCatalogo")]
+        public async Task<ActionResult<GeneralResponse>> ConsultarItemsPorCatalogo(int idCatalogo)
+        {
+            return Ok(_proyectoCore.ConsultarItemsPorCatalogo(idCatalogo));
+        }
+
+
+        #endregion
+
 
     }
 }
