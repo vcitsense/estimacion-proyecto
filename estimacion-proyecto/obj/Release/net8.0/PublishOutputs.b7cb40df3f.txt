@@ -7,6 +7,8 @@ C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimaci
 C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto\obj\Release\net8.0\PubTmp\Out\estimacion-proyecto.pdb
 C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto\obj\Release\net8.0\PubTmp\Out\Azure.Core.dll
 C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto\obj\Release\net8.0\PubTmp\Out\Azure.Identity.dll
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto\obj\Release\net8.0\PubTmp\Out\BouncyCastle.Cryptography.dll
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto\obj\Release\net8.0\PubTmp\Out\itextsharp.dll
 C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto\obj\Release\net8.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto\obj\Release\net8.0\PubTmp\Out\Microsoft.Data.SqlClient.dll

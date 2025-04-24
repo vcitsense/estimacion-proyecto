@@ -40,5 +40,8 @@ namespace estimacion_proyecto.domain.Dto
         [Column("costo_total")]
         public decimal CostoTotal { get; set; }
 
+        [Column("cantidad_horas")]
+        public decimal CantidadHoras { get; set; }
+
     }
 }

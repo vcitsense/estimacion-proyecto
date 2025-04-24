@@ -84,6 +84,11 @@ export class UsuarioService {
     return this.http.post(this.baseUrl + "api/Proyecto/UpsertCostoPerfilPorProyecto", input);
   }
 
+  generarInformeProyecto(idProyecto: number): Observable<any> {
+    return this.http.get(this.baseUrl + "api/Proyecto/GenerarInformeProyecto?idProyecto=" + idProyecto);
+  }
+
+
 
   //Catalogos  ===========================================================================================================
   consultarItemsPorCatalogo(idCatalogo: number): Observable<any> {

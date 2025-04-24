@@ -118,6 +118,13 @@ namespace estimacion_proyecto.core.Core
         /// <returns>List<ProyectoCostoPerfilDto></returns>
         GeneralResponse UpsertCostoPerfilPorProyecto(ProyectoCostoPerfilDto input);
 
+        /// <summary>
+        /// Generar informe proyecto
+        /// </summary>
+        /// <param name="idProyecto"></param>
+        /// <returns>String Base 64</returns>
+        GeneralResponse GenerarInformeProyecto(int idProyecto);
+
         #endregion
 
         #region Catalogo

@@ -93,3 +93,5 @@ C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimaci
 C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto\obj\Release\net8.0\estimacion-proyecto.genruntimeconfig.cache
 C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto\obj\Release\net8.0\ref\estimacion-proyecto.dll
 C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto\obj\Release\net8.0\estimacion-proyecto.sourcelink.json
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto\bin\Release\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\VictorCuellar\Documents\Personal\Repo\UNIR\estimacion-proyecto\estimacion-proyecto\bin\Release\net8.0\itextsharp.dll

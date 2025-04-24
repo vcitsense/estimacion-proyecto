@@ -6,13 +6,20 @@
       "AbsoluteMoniker": "D:0:0:{561DE120-E1C5-4537-8D3A-724FCACDE5FD}|..\\estimacion-proyecto.core\\estimacion-proyecto.core.csproj|c:\\users\\victorcuellar\\documents\\personal\\repo\\unir\\estimacion-proyecto\\estimacion-proyecto.core\\core\\proyectocore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0A92F50C-1EBC-43AD-A4E9-51E710BCCB0D}|..\\estimacion-proyecto.domain\\estimacion-proyecto.domain.csproj|c:\\users\\victorcuellar\\documents\\personal\\repo\\unir\\estimacion-proyecto\\estimacion-proyecto.domain\\response\\proyeccionmodelo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06FD8E29-9632-4115-930A-4ADF3A6058E7}|estimacion-proyecto.csproj|c:\\users\\victorcuellar\\documents\\personal\\repo\\unir\\estimacion-proyecto\\estimacion-proyecto\\controllers\\proyectocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06FD8E29-9632-4115-930A-4ADF3A6058E7}|estimacion-proyecto.csproj|solutionrelative:controllers\\proyectocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{561DE120-E1C5-4537-8D3A-724FCACDE5FD}|..\\estimacion-proyecto.core\\estimacion-proyecto.core.csproj|c:\\users\\victorcuellar\\documents\\personal\\repo\\unir\\estimacion-proyecto\\estimacion-proyecto.core\\core\\iproyectocore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0FA30C40-5FC0-440B-AAD9-8F8E2C4499F4}|..\\estimacion-proyecto.data\\estimacion-proyecto.data.csproj|c:\\users\\victorcuellar\\documents\\personal\\repo\\unir\\estimacion-proyecto\\estimacion-proyecto.data\\proyectodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A92F50C-1EBC-43AD-A4E9-51E710BCCB0D}|..\\estimacion-proyecto.domain\\estimacion-proyecto.domain.csproj|c:\\users\\victorcuellar\\documents\\personal\\repo\\unir\\estimacion-proyecto\\estimacion-proyecto.domain\\response\\costoperfilmodelo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A92F50C-1EBC-43AD-A4E9-51E710BCCB0D}|..\\estimacion-proyecto.domain\\estimacion-proyecto.domain.csproj|c:\\users\\victorcuellar\\documents\\personal\\repo\\unir\\estimacion-proyecto\\estimacion-proyecto.domain\\response\\proyeccionmodelo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,18 +28,44 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 407,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "ProyectoController.cs",
+              "DocumentMoniker": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto\\Controllers\\ProyectoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProyectoController.cs",
+              "ToolTip": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto\\Controllers\\ProyectoController.cs",
+              "RelativeToolTip": "Controllers\\ProyectoController.cs",
+              "ViewState": "AQIAAOAAAAAAAAAAAAA/wAIBAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T02:41:56.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IProyectoCore.cs",
+              "DocumentMoniker": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.core\\Core\\IProyectoCore.cs",
+              "RelativeDocumentMoniker": "..\\estimacion-proyecto.core\\Core\\IProyectoCore.cs",
+              "ToolTip": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.core\\Core\\IProyectoCore.cs",
+              "RelativeToolTip": "..\\estimacion-proyecto.core\\Core\\IProyectoCore.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAAwHgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T02:41:41.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ProyectoDatos.cs",
               "DocumentMoniker": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.data\\ProyectoDatos.cs",
               "RelativeDocumentMoniker": "..\\estimacion-proyecto.data\\ProyectoDatos.cs",
               "ToolTip": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.data\\ProyectoDatos.cs",
               "RelativeToolTip": "..\\estimacion-proyecto.data\\ProyectoDatos.cs",
-              "ViewState": "AQIAAJcBAAAAAAAAAAA4wKoBAAAIAAAA",
+              "ViewState": "AQIAAMMAAAAAAAAAAAAlwMwAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T22:19:32.918Z",
               "EditorCaption": ""
@@ -45,42 +78,29 @@
               "RelativeDocumentMoniker": "..\\estimacion-proyecto.core\\Core\\ProyectoCore.cs",
               "ToolTip": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.core\\Core\\ProyectoCore.cs",
               "RelativeToolTip": "..\\estimacion-proyecto.core\\Core\\ProyectoCore.cs",
-              "ViewState": "AQIAAIQBAAAAAAAAAAAUwJgBAAAMAAAA",
+              "ViewState": "AQIAANACAAAAAAAAAAAAAOECAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T22:13:38.336Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "CostoPerfilModelo.cs",
               "DocumentMoniker": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.domain\\Response\\CostoPerfilModelo.cs",
               "RelativeDocumentMoniker": "..\\estimacion-proyecto.domain\\Response\\CostoPerfilModelo.cs",
               "ToolTip": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.domain\\Response\\CostoPerfilModelo.cs",
               "RelativeToolTip": "..\\estimacion-proyecto.domain\\Response\\CostoPerfilModelo.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABoAAAAbAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwBwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T22:13:30.111Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProyeccionModelo.cs",
-              "DocumentMoniker": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.domain\\Response\\ProyeccionModelo.cs",
-              "RelativeDocumentMoniker": "..\\estimacion-proyecto.domain\\Response\\ProyeccionModelo.cs",
-              "ToolTip": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.domain\\Response\\ProyeccionModelo.cs",
-              "RelativeToolTip": "..\\estimacion-proyecto.domain\\Response\\ProyeccionModelo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T22:13:23.274Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 182,
-          "SelectedChildIndex": -1,
+          "DockedWidth": 130,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -89,6 +109,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProyeccionModelo.cs",
+              "DocumentMoniker": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.domain\\Response\\ProyeccionModelo.cs",
+              "RelativeDocumentMoniker": "..\\estimacion-proyecto.domain\\Response\\ProyeccionModelo.cs",
+              "ToolTip": "C:\\Users\\VictorCuellar\\Documents\\Personal\\Repo\\UNIR\\estimacion-proyecto\\estimacion-proyecto.domain\\Response\\ProyeccionModelo.cs",
+              "RelativeToolTip": "..\\estimacion-proyecto.domain\\Response\\ProyeccionModelo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T22:13:23.274Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -8,20 +8,28 @@
         
         <div style="
             display: flex;
-            justify-content: end;
+            justify-content: center;
         ">
-            <div class="mb-3">
-                <button class="btn btn-primary btn-lg" (click)="abrirModalCrear()">Agregar</button>
-            </div>
+            <h2>INFORME</h2>
         </div>
 
-        <table class="table table-striped"
+        @if (costoPerfil.length > 0) 
+        {
+            <div style="
+                display: flex;
+                justify-content: right;
+                padding-bottom: 5px;
+            ">
+                <img src="https://cdn-icons-png.flaticon.com/512/136/136522.png" (click)="descargarInforme()" width="30px" height="30px">
+            </div>
+            <table class="table table-striped"
             >
             <thead class="table-dark">
             <tr>
                 <th scope="col">Perfil</th>
                 <th scope="col">Cant. Personas</th>
                 <th scope="col">Costo Hora</th>
+                <th scope="col">Cantidad Horas</th>
                 <th scope="col">Porcentaje Asignación</th>
                 <th scope="col">Costo Total</th>
                 <th scope="col">Editar</th>
@@ -34,6 +42,7 @@
                 <td>{{ item.perfilNombre }}</td>
                 <td>{{ item.cantidad }}</td>
                 <td>{{ item.costoHora  | currency:'':'symbol':'1.2-2' }}</td>
+                <td>{{ item.cantidadHoras}}</td>
                 <td>{{ item.porcentajeAsignacion }}%</td>
                 <td>{{ item.costoTotal  | currency:'':'symbol':'1.2-2' }}</td>
                 <td >
@@ -42,11 +51,13 @@
                 </tr>
             </tbody>
 
-        </table>
-
-        @if (costoPerfil.length > 0) 
+         </table>        
+            <h5>Total Costo: {{totalCost  | currency:'':'symbol':'1.2-2'}}</h5>
+        }
+        
+        @if (costoPerfil.length == 0) 
         {
-            <h5>Total: {{totalCost  | currency:'':'symbol':'1.2-2'}}</h5>
+            <label>Cargando....</label>
         }
         
 
@@ -78,7 +89,7 @@
     
                         <div class="mb-3 col-6">
                             <label class="form-label">Cantidad Personas</label>
-                            <input type="number" class="form-control" [(ngModel)]="costoPerfileleccionado.cantidad" name="cantidad" required>
+                            <input type="number" class="form-control" [(ngModel)]="costoPerfileleccionado.cantidad" name="cantidad" (keyup)="calculateTotal()"  required>
                         </div>
                     </div>
 
@@ -87,12 +98,12 @@
 
                         <div class="mb-3  col-6">
                             <label class="form-label">Costo x Hora</label>
-                            <input type="number" class="form-control" [(ngModel)]="costoPerfileleccionado.costoHora" name="costoHora" required>
+                            <input type="number" class="form-control" [(ngModel)]="costoPerfileleccionado.costoHora" name="costoHora" (keyup)="calculateTotal()"  required>
                         </div>
     
                         <div class="mb-3  col-6">
                             <label class="form-label">Procentaje Asignación %</label>
-                            <input type="number" class="form-control" [(ngModel)]="costoPerfileleccionado.porcentajeAsignacion" (keyup)="calculateTotal()" name="porcentajeAsignacion" required>
+                            <input type="number" class="form-control" [(ngModel)]="costoPerfileleccionado.porcentajeAsignacion" name="porcentajeAsignacion" required disabled>
                         </div>
 
                     </div>

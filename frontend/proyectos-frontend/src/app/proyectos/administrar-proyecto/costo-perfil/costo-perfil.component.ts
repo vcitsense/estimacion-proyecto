@@ -33,6 +33,8 @@ export class CostoPerfilComponent {
   costoPerfileleccionado: CostoPerfilModel = new CostoPerfilModel();
   perfiles: ItemModel[] = [];
 
+  reporteBase64: string = "";
+
   @ViewChild('upsertModal') modal: any; // Access the modal using ViewChild
 
   constructor(private _usuarioService: UsuarioService
@@ -44,6 +46,7 @@ export class CostoPerfilComponent {
 
   this.consultarCostoPerfilPorProyecto();
   this.consultarItemsPorCatalogo();
+  this.generarInformeProyecto();
 
   }
 
@@ -72,6 +75,21 @@ export class CostoPerfilComponent {
         this.mensaje.codigo = 500
         this.mensaje.mensaje = "Error procesando la solicitud"
         this.mensaje.ver = true
+    
+      }
+    });
+  }
+
+  generarInformeProyecto()
+  {
+    this._usuarioService.generarInformeProyecto(this.idProyectoSeleccionado).subscribe({
+      next: (response) => {
+    
+       this.reporteBase64 = response.data;
+    
+      },
+      error: (error) => {
+        console.error('error', error);
     
       }
     });
@@ -135,7 +153,7 @@ export class CostoPerfilComponent {
         this._usuarioService.upsertCostoPerfilPorProyecto(this.costoPerfileleccionado).subscribe({
           next: (response) => {
     
-    
+            this.generarInformeProyecto();
             this.mensaje.codigo = response.status
             this.mensaje.mensaje = response.message
             this.mensaje.ver = true;
@@ -166,7 +184,7 @@ export class CostoPerfilComponent {
 
     calculateTotal()
     {
-      this.costoPerfileleccionado.costoTotal = this.costoPerfileleccionado.costoHora * this.costoPerfileleccionado.cantidad;
+      this.costoPerfileleccionado.costoTotal = this.costoPerfileleccionado.costoHora * this.costoPerfileleccionado.cantidad * this.costoPerfileleccionado.cantidadHoras;
     }
 
     validarPorcentaje(): boolean
@@ -198,6 +216,28 @@ export class CostoPerfilComponent {
       {
         return true;
       }
+    }
+
+
+    descargarInforme()
+    {
+      const byteCharacters = atob(this.reporteBase64);
+      const byteNumbers = new Array(byteCharacters.length);
+
+      for (let i = 0; i < byteCharacters.length; i++) {
+        byteNumbers[i] = byteCharacters.charCodeAt(i);
+      }
+
+      const byteArray = new Uint8Array(byteNumbers);
+      const blob = new Blob([byteArray], { type: 'pdf' });
+
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.download = 'informe.pdf';
+      link.click();
+
+      // Clean up
+      window.URL.revokeObjectURL(link.href);
     }
 
 }

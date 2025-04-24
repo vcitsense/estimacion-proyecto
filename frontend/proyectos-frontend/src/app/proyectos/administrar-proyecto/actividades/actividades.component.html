@@ -42,12 +42,12 @@
         <thead class="table-dark">
         <tr>
             <th scope="col">Id</th>
-            <th scope="col">Descripción</th>
-            <th scope="col">Analisis</th>
+            <th scope="col">Descripción</th>            
             <th scope="col">Documentación</th>
-            <th scope="col">Pruebas</th>
-            <th scope="col">Devops</th>
             <th scope="col">Diseño Grafico</th>
+            <th scope="col">Desarrollo</th>
+            <th scope="col">Pruebas</th>
+            <th scope="col">Devops</th>            
             <th scope="col">Total</th>
             <th scope="col">Editar</th>
         </tr>
@@ -58,10 +58,10 @@
             <th scope="row">{{ item.idActividad }}</th>
             <td>{{ item.descripcion }}</td>
             <td>{{ item.analisis }}</td>
+            <td>{{ item.disenoGrafico }}</td>
             <td>{{ item.documentacion }}</td>
             <td>{{ item.pruebas }}</td>
-            <td>{{ item.devops }}</td>
-            <td>{{ item.disenoGrafico }}</td>
+            <td>{{ item.devops }}</td>            
             <td>{{ item.total }} Horas</td>
             <td >
                 <img src="https://cdn-icons-png.flaticon.com/512/84/84380.png" (click)="abrirModalEditar(item)" width="30px" height="30px">
@@ -97,38 +97,46 @@
                     <h5>Esfuerzo en horas</h5>
 
                     <div class="row">
-                        <div class="mb-3 col-6">
-                            <label class="form-label">Analisis</label>
-                            <input type="number" class="form-control" [(ngModel)]="actividadSeleccionada.analisis" name="analisis" required>
-                        </div>
-    
+                       
                         <div class="mb-3 col-6">
                             <label class="form-label">Documentación</label>
                             <input type="number" class="form-control" [(ngModel)]="actividadSeleccionada.documentacion" name="documentacion" required>
                         </div>
+
+                        <div class="mb-3 col-6">
+                            <label class="form-label">Diseño Grafico</label>
+                            <input type="number" class="form-control" [(ngModel)]="actividadSeleccionada.disenoGrafico" name="disenoGrafico" required>
+                        </div>
+
+                        
+    
                     </div>
 
                     
                     <div class="row">
+
+                        <div class="mb-3 col-6">
+                            <label class="form-label">Desarrollo</label>
+                            <input type="number" class="form-control" [(ngModel)]="actividadSeleccionada.analisis" name="analisis" required>
+                        </div>
 
                         <div class="mb-3  col-6">
                             <label class="form-label">Pruebas</label>
                             <input type="number" class="form-control" [(ngModel)]="actividadSeleccionada.pruebas" name="pruebas" required>
                         </div>
     
-                        <div class="mb-3  col-6">
-                            <label class="form-label">Devops</label>
-                            <input type="number" class="form-control" [(ngModel)]="actividadSeleccionada.devops" name="devops" required>
-                        </div>
+                      
 
                     </div>
                     
                     <div class="row">
 
-                        <div class="mb-3 col-6">
-                            <label class="form-label">Diseño Grafico</label>
-                            <input type="number" class="form-control" [(ngModel)]="actividadSeleccionada.disenoGrafico" name="disenoGrafico" required>
+                        
+                        <div class="mb-3  col-6">
+                            <label class="form-label">Devops</label>
+                            <input type="number" class="form-control" [(ngModel)]="actividadSeleccionada.devops" name="devops" required>
                         </div>
+                        
                         @if (actividadSeleccionada.idActividad != 0) 
                         {
                             <div class="mb-3  col-6">

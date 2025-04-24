@@ -223,6 +223,11 @@ namespace estimacion_proyecto.data
 
                         actividadesDb?.All(a =>
                         {
+                            result.TotalDevops += a.Devops;
+                            result.TotalDeveloper += a.Analisis;
+                            result.TotalTester += a.Pruebas;
+                            result.TotalProjectManager += a.Documentacion;
+                            result.TotalDisenadorGrafico += a.DisenoGrafico;
                             huActual.Actividades.Add(new ActividadModel(a));
                             return true;
                         });
@@ -444,7 +449,7 @@ namespace estimacion_proyecto.data
 
                 _DbContext.SaveChanges();
 
-                return _DbContext.ProyectoCostoPerfil.Where(x => x.IdProyecto == input.IdProyecto).ToList();
+                return new List<ProyectoCostoPerfilDto>();
             }
             catch (Exception ex)
             {

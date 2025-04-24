@@ -14,5 +14,14 @@ namespace estimacion_proyecto.domain.Response
             Error = 500,
             BadRequest = 400
         }
+
+        public enum enumPerfil
+        {
+            Devops = 1,
+            Developer =	2,
+            Tester = 3,
+            ProjectManager	= 4,
+            DisenadorGrafico = 5
+        }
     }
 }

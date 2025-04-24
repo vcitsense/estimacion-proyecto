@@ -32,12 +32,12 @@
               <a class="nav-link" [ngClass]="{'active': tabSeleccionado === 3}" (click)="seleccionarTab(3)" aria-current="page">Tareas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" [ngClass]="{'active': tabSeleccionado === 4}" (click)="seleccionarTab(4)" aria-current="page">Estimación</a>
+              <a class="nav-link" [ngClass]="{'active': tabSeleccionado === 4}" (click)="seleccionarTab(4)" aria-current="page">Proyección</a>
             </li>
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" [ngClass]="{'active': tabSeleccionado === 5}" (click)="seleccionarTab(5)" aria-current="page">Costos</a>
-            </li>
+            </li> -->
           </ul>
 
 
@@ -58,12 +58,8 @@
 
           @if (tabSeleccionado === 4) 
           {
-            <app-proyeccion></app-proyeccion>
-          }
-
-          @if (tabSeleccionado === 5) 
-          {
             <app-costo-perfil></app-costo-perfil>
+            <app-proyeccion></app-proyeccion>
           }
 
           

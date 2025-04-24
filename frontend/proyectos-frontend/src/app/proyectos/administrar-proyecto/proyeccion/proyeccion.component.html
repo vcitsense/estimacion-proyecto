@@ -1,9 +1,14 @@
 
 @if (proyeccion) 
 {
-    <div>
-        <br><h4>{{proyeccion.total}} Horas</h4> <br>
-    </div>
+    @if (proyeccion.total > 0) 
+    {
+        <div style="padding-left: 10px;">
+            <br><h5>Total Horas: {{proyeccion.total}} </h5> <br>
+        </div>
+    }
+
+  
     <div class="card  border-primary mb-3" *ngFor="let modulo of proyeccion.modulos; let i = index">
         <div class="card-header">
          <b>MÓDULO  {{modulo.nombreModulo}}  - {{modulo.total}} Horas </b>
@@ -18,7 +23,7 @@
                     <tr>
                         <th scope="col">Id</th>
                         <th scope="col">Nombre</th>
-                        <th scope="col">Descripción</th>
+                        <th scope="col" style="width: 20%;">Descripción</th>
                         <th scope="col">Total</th>
                         <th scope="col">Tareas</th>
                     </tr>

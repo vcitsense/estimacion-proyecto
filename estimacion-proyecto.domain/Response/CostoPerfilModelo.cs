@@ -24,7 +24,8 @@ namespace estimacion_proyecto.domain.Response
             this.Cantidad = dto.Cantidad;
             this.CostoHora = dto.CostoHora;
             this.PorcentajeAsignacion = dto.PorcentajeAsignacion;
-            this.CostoTotal = dto.CostoTotal;           
+            this.CostoTotal = dto.CostoTotal;
+            this.CantidadHoras = dto.CantidadHoras;
         }
 
         public int IdCosto { get; set; }
@@ -40,5 +41,6 @@ namespace estimacion_proyecto.domain.Response
         public decimal CostoTotal { get; set; }
 
         public decimal Total { get; set; }
+        public decimal CantidadHoras { get; set; }
     }
 }

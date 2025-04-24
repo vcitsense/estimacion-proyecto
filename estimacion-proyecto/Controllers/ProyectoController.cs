@@ -248,6 +248,20 @@ namespace estimacion_proyecto.Controllers
             }
         }
 
+
+        /// <summary>
+        /// Generar informe proyecto
+        /// </summary>
+        /// <param name="idProyecto"></param>
+        /// <returns>String Base 64</returns>
+        [HttpGet]
+        [Route("GenerarInformeProyecto")]
+        public async Task<ActionResult<GeneralResponse>> GenerarInformeProyecto(int idProyecto)
+        {
+            return Ok(_proyectoCore.GenerarInformeProyecto(idProyecto));
+        }
+
+
         #endregion
 
         #region Catalogo
